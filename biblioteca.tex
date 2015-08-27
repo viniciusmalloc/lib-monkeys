@@ -7,8 +7,7 @@
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 
-
-\usepackage[top=2cm, bottom=1.5cm, left=1cm, right=1cm,landscape]{geometry}
+\usepackage[top=2cm, bottom=1.5cm, left=1cm, right=1cm, landscape]{geometry}
 
 \usepackage{multicol}
 \setlength{\columnseprule}{.5pt}
@@ -26,51 +25,55 @@
 
 \usepackage{listings}
 \lstset{language=C++,
-basicstyle=\scriptsize\ttfamily,
-%keywordstyle=\color{ckeywords}\bfseries,
-%stringstyle=\color{cstrings},
-%commentstyle=\color{ccomments},
-columns=fullflexible}
+  basicstyle=\scriptsize\ttfamily,
+  %keywordstyle=\color{ckeywords}\bfseries,
+  %stringstyle=\color{cstrings},
+  %commentstyle=\color{ccomments},
+  columns=fullflexible}
 
 \newcommand\includefile[4]{
-   \subsubsection{#2}
-   \begin{multicols}{2}
+  \subsubsection{#2}
+  \begin{multicols}{2}
     \lstinputlisting[language=#1]{#3/#4}
-   \end{multicols}
+  \end{multicols}
 }
 \newcommand\includelfile[4]{
-   \subsubsection{#2}
-   \begin{multicols}{2}
+  \subsubsection{#2}
+  \begin{multicols}{2}
     \lstinputlisting[language=#1]{#3/#4}
-   \end{multicols}
+  \end{multicols}
 }
 \newcommand\includesfile[4]{
-   \subsection{#2}
-   \begin{multicols}{2}
+  \subsection{#2}
+  \begin{multicols}{2}
     \lstinputlisting[language=#1]{#3/#4}
-   \end{multicols}
+  \end{multicols}
 }
-
 
 \begin{document}
 
 \thispagestyle{fancy}
 \begin{center}
-	\Huge\textsc{Universidade Federal de Goiás \\ Team Reference Material}
+  \Huge\textsc{Universidade Federal de Goiás \\ Team Reference Material}
 	
 	\
-	\small 2012 South America/Brazil Regional Contest
+	\small 2015 South America/Brazil Regional Contest
 \end{center}
+
+\begin{multicols}{2}
+  \tableofcontents
+\end{multicols}
 
 \
 
-\includegraphics[scale=.65]{config/toctoc.png}
-
+%\includegraphics[scale=.65]{config/toctoc.png}
 
 \newpage
-\includesfile{c++}{template}{config}{template.cpp}
 
-\subsection{Combinatorics}
+\includesfile{c++}{Template}{config}{template.cpp}
+
+% --Section-- Combinatorics
+\section{Combinatorics}
 \subsubsection{Binomial Coefficients}
 
 Number of ways to pick a multiset of sike $k$ from $n$ elements: $\binom{n+k-1}{k}$\\
@@ -103,13 +106,15 @@ Formula: $E(n,k) = (k+1)E(n-1,k) + (n-k)E(n-1,k-1)$.
 The number of orbits under $G$'s action on set $X$ : $|X/G| = \frac{1}{|G|} \sum_{g \in G} |X_g|$, where $X_g = \{x \in X : g(x) = x\}$. (``Average number of fixed points.'')
 Let $w(x)$ be weight of $x$'s orbit. Sum of all orbits' weights: $\sum_{o \in X/G}w(o) = \frac{1}{|G|} \sum_{g \in G} \sum_{x \in X_g} w(x)$.
 
-\subsection{Number Theory}
+% --Section-- Number Theory
+\section{Number Theory}
 \subsubsection{Linear diophantine equation}
 $ax + by = c$. Let $d = gcd(a,b)$. A solution exists iff $d|c$. If $(x_0, y_0)$ is any solution, then all solutions are given by $(x, y) = (x_0 + \frac{b}{d}t, y_0 - \frac{a}{d}t), t \in \mathbb{Z}$. To find some solution $(x_0, y_0)$,
 use extended GCD to solve $ax_0 + by_0 = d = gcd(a, b)$, and multiply its solutions by $\frac{c}{d}$.\\
 Linear diophantine equation in $n$ variables: $a_1x_1 + ... + a_nx_n = c$ has solutions iff $gcd(a_1, ..., a_n) | c$. To find some solution, let $b = gcd(a_2, ..., a_n)$, solve $a_1x_1 + by = c$, and iterate with $a_2x_2 + ... = y$.
 
 \newpage
+
 \includefile{c++}{Extended GCD}{meh}{gcdext.cpp}
 
 $a^{-1} (mod\ n) = a^{\phi(n)-1}$
@@ -124,12 +129,14 @@ System $x \equiv a (mod\ m), x \equiv b (mod\ n)$ has solutions iff $a \equiv b 
 $\pi(n) = |\{p \leq n : p\ is\ prime\}|$. $n / ln(n) < \pi(n) < 1.3n / ln(n)$. $\pi(1000) = 168, \pi(10^6) = 78498, \pi(10^9) = 50 847 534$. $n$-th prime $\approx n ln(n)$.
 
 \newpage
+
 \includefile{c++}{Fast Sieve}{math}{sieve.cpp}
 
 \includefile{c++}{Miller-Rabin's primality test}{math}{miller_rabin.cpp}
 Given $n = 2^{r}s + 1$ with odd s, and a random integer $1 < a < n$. If $a^{s} \equiv 1 (mod\ n)$ or $a^{2^{j}s} \equiv -1 (mod\ n)$ for some $0 \leq j \leq r-1$, then $n$ is a probable prime.
 
 \newpage
+
 \includefile{c++}{Pollard-$\rho$}{math}{pollard.cpp}
 Choose random $x_1$, and let $x_{i+1} = x_{i}^{2} (mod\ n)$. Test $gcd(n,x_{2^k+i} - x_{2^k})$ as possible $n$'s factors for $k = 0, 1, ...$ Expected time to find a factor: $O(\sqrt{m})$, where $m$ is smallest prime power in $n$'s factorization. That's $O(n^{1/4})$ if you check $n = p^k$ as a special case before factorization.
 
@@ -143,6 +150,7 @@ $n > 1$ is called perfect if it equals sum of its proper divisors and 1. Even $n
 A positive composite $n$ is a Carmichael number $(a^{n-1} \equiv 1 (mod\ n)$ for all $a: gcd(a,n) = 1)$, iff $n$ is square-free, and for all prime divisors $p$ of $n$, $p-1$ divides $n-1$.
 
 \newpage
+
 \includefile{c++}{Number/sum of divisors}{meh}{sigma.cpp}
 $\tau(p_1^{a_1}...p_k^{a_k}) = \prod_{j=1}^{k}(a_j + 1).$
 
@@ -201,13 +209,14 @@ Let $a, b$ be relatively-prime integers. There are exactly $\frac{1}{2}(a-1)(b-1
 \subsubsection{Fermat's two-squares theorem}
 Odd prime $p$ can be represented as a sum of two squares iff $p \equiv 1 (mod\ 4)$. A product of two sums of two squares is a sum of two squares. Thus, $n$ is a sum of two squares iff every prime of form $p = 4k + 3$ occurs an even number of times in $n$'s factorization.
 
-
 \newpage
-\subsection{String Algorithms}
+
+% --Section-- String Algorithms
+\section{String Algorithms}
 \includefile{c++}{String Hash}{string}{hash.cpp}
 
 \begin{multicols}{2}
-	\subsubsection{Prefix Function}
+  \subsubsection{Prefix Function}
 	\lstinputlisting[language=c++]{string/prefixfunc.cpp}
 	
 	\subsubsection{Z Function}
@@ -216,14 +225,17 @@ Odd prime $p$ can be represented as a sum of two squares iff $p \equiv 1 (mod\ 4
 
 \includefile{c++}{Manacher}{string}{manacher.cpp}
 \includefile{c++}{Aho-Corasick}{string}{aho.cpp}
+
 \newpage
+
 \includefile{c++}{Suffix Array O(n log n)}{string}{suffix_array.cpp}
 \newpage
 \includefile{c++}{Suffix Array O(n)}{string}{karkkainen.cpp}
 \includefile{c++}{Suffix Automata}{string}{suffixaut.cpp}
+
 \begin{itemize}
-\item First occurrence of string P $= firstpos(v) - |P| + 1$;
-\item All occurrences: same as before, but must follow inverse suffix links and don't print clones.
+  \item First occurrence of string P $= firstpos(v) - |P| + 1$;
+  \item All occurrences: same as before, but must follow inverse suffix links and don't print clones.
 \end{itemize}
 
 \subsubsection{Burrows-Wheeler inverse transform}
@@ -235,7 +247,9 @@ Start with a forest, consisting of isolated vertices. Repeatedly merge two trees
 %suffix array usage
 
 \newpage
-\subsection{Graphs}
+
+% --Section-- Graphs
+\section{Graphs}
 \subsubsection{Euler’s theorem}
 For any planar graph, $V - E + F = 1 + C$, where $V$ is the number of graph’s vertices, $E$ is the number of edges, $F$ is the number of faces in graph’s planar drawing,
 and $C$ is the number of connected components. Corollary: $V - E + F = 2$ for a 3D polyhedron.
@@ -274,8 +288,6 @@ Store cut-of-the-phase (the cut between the last added vertex and rest of the gr
 \subsubsection{Tarjan’s offline LCA algorithm}
   \includegraphics[scale=.7]{graph/offlinelca.png}
 
-
-
 \subsubsection{Erdos-Gallai theorem}
 A sequence of integers $\{d_1,d_2,...,d_n\}$, with $n-1 \geq d_1 \geq d_2 \geq ... \geq d_n \geq 0$ is a degree sequence of some undirected simple graph iff $\sum d_i$ is even and $d_1+ ... + dk \leq k(k-1)+ \sum_{i=k+1}^{n}min(k, d_i)$
 for all $k = 1, 2, . . . , n - 1$.
@@ -289,68 +301,77 @@ and a partition of the order into a family $P$ of chains, such that the number o
 element from each member of $P$. Similarly, $P$ must be the smallest family of chains into which the order can be partitioned, for any partition into chains must have at least one chain per element of $A$. The width of the partial order is
 defined as the common size of $A$ and $P$. 
 
-
 \includefile{c++}{Floyd-Warshall reconstructing path}{graph}{floyd_warshall.cpp}
 \includefile{c++}{Tarjan algorithm for articulation points}{graph}{tarjan_articulation.cpp}
 \includefile{c++}{Tarjan algorithm for brigdes}{graph}{tarjan_bridges.cpp}
 \includefile{c++}{Tarjan algorithm for strongly connected components}{graph}{tarjan_scc.cpp}
-
 \includefile{c++}{Busacker Gowen}{graph}{busacker_gowen.cpp}
+
 \newpage
+
 \includefile{c++}{Dinic}{graph}{dinic.cpp}
 \includefile{c++}{Edmonds Karp}{graph}{edmonds_karp.cpp}
 \includefile{c++}{Gabow}{graph}{gabow.cpp}
+
 \newpage
+
 \includefile{c++}{Gomory Hu Tree}{graph}{gomory_hu.cpp}
 \includefile{c++}{Kuhn Munkres}{graph}{kuhn_munkres.cpp}
 \includefile{c++}{Link Cut Tree}{graph}{link_cut.cpp}
-
 \includefile{c++}{Heavy Light Decomposition}{graph}{heavy-light.cpp}
 \includefile{c++}{LCA / PD}{graph}{lcapd.cpp}
 
-%modelagens maxflow
+%max flow modeling
 
 \newpage
+
 \subsection{Data structures}
 \includefile{c++}{Treap}{structures}{treap.cpp}
 \includefile{c++}{AVL Tree}{structures}{avl.cpp}
+
 \newpage
+
 \includefile{c++}{Find index with given cumulative frequency}{structures}{bit.cpp}
 \includefile{c++}{Heap}{structures}{heap.cpp}
 \includefile{c++}{Big Integer}{structures}{bignum.cpp}
 
-
 \newpage
-\subsection{Games}
+
+% --Section-- Game Theory
+\section{Games}
 \subsubsection{Grundy numbers}
 For a two-player, normal-play (last to move wins) game on a graph ($V,E$): $G(x)=mex(\{G(y) : (x,y) \in E\})$, where $mex(S)=min\{n \geq 0 : n \not\in S\}$. $x$ is losing iff $G(x)=0$.
 
 \subsubsection{Sums of games}
 \begin{itemize}
-\item Player chooses a game and makes a move in it. Grundy number of a position is xor of grundy numbers of positions in summed games.
-\item Player chooses a non-empty subset of games (possibly, all) and makes moves in all of them. A position is losing iff each game is in a losing position.
-\item Player chooses a proper subset of games (not empty and not all), and makes moves in all chosen ones. A position is losing iff grundy numbers of all games are equal.
-\item Player must move in all games, and loses if can’t move in some game. A position is losing if any of the games is in a losing position.
+  \item Player chooses a game and makes a move in it. Grundy number of a position is xor of grundy numbers of positions in summed games.
+  \item Player chooses a non-empty subset of games (possibly, all) and makes moves in all of them. A position is losing iff each game is in a losing position.
+  \item Player chooses a proper subset of games (not empty and not all), and makes moves in all chosen ones. A position is losing iff grundy numbers of all games are equal.
+  \item Player must move in all games, and loses if can’t move in some game. A position is losing if any of the games is in a losing position.
 \end{itemize}
 
 \subsubsection{Misère Nim}
 A position with pile sizes $a_1,a_2,...,a_n \geq 1$, not all equal to 1, is losing iff $a_1 \bigoplus a_2 \bigoplus ... \bigoplus a_n = 0$ (like in normal nim.)
 A position with $n$ piles of size 1 is losing iff $n$ is odd.
 
-
 \newpage
-\subsection{Math}
+
+% --Section-- Math
+\section{Math}
 \includefile{c++}{Simpson's rule}{meh}{simpson.cpp}
 \includefile{c++}{Polynomials}{meh}{polynomials.cpp}
 \includefile{c++}{Cycle Finding}{meh}{cyclefinding.cpp}
 \includefile{c++}{Romberg's Method}{math}{romberg.cpp}
+
 \newpage
+
 \includefile{c++}{FFT}{math}{fft.cpp}
 \includefile{c++}{Simplex}{math}{simplex.cpp}
 
 \newpage
-\subsection{Geometry}
 
+% --Section-- Geometry
+\section{Geometry}
 \subsubsection{Pick's theorem}
 $I = A - B/2 + 1$, where $A$ is the area of a lattice polygon, $I$ is the number of lattice points inside it, and $B$ is the number of lattice points on the boundary. Number of lattice points minus one on a line segment from (0, 0) and (x, y) is gcd(x, y).
 
@@ -424,20 +445,19 @@ Shoot a ray from given point in an arbitrary direction. For each intersection of
 \includefile{c++}{Range Tree}{geometry}{range_tree.cpp}
 \includefile{c++}{KD Tree}{geometry}{kd_tree.cpp}
 \includefile{c++}{Enclosing Circle}{geometry}{enclosing_circle.cpp}
-
 \includefile{c++}{Geometry Basics}{meh}{geobasics.cpp}
 \includefile{c++}{3D Geometry Basics}{meh}{3dbasics.cpp}
 \includefile{c++}{Polygon Basics}{meh}{pbasics.cpp}
 \includefile{c++}{Plane and Operations}{meh}{pops.cpp}
-\newpage
-\includefile{c++}{Intersections}{meh}{intersections.cpp}
 
-   
+\newpage
+
+\includefile{c++}{Intersections}{meh}{intersections.cpp}   
 \includefile{c++}{Angles}{meh}{angles.cpp}
 \includefile{c++}{Triangles}{meh}{triangles.cpp}
+
 \subsubsection{Great Circle Distance}
 \lstinputlisting[language=c++]{meh/grtcrcldist.cpp}
-
 \includefile{c++}{Convex Hull (Line Sweep)}{meh}{hull_ls.cpp}
 \includefile{c++}{Graham Scan}{meh}{gscan.cpp}
 \includefile{c++}{Circles Intersections}{meh}{cintersect.cpp}
@@ -446,7 +466,9 @@ Shoot a ray from given point in an arbitrary direction. For each intersection of
 \includefile{c++}{Line Sweep Applications}{geometry}{line_sweep.cpp}
 
 \newpage
-\subsection{Miscellanious}
+
+% --Section-- Miscellaneous
+\subsection{Miscellaneous}
 
 \subsubsection{Subsets of a subset in $O(3^n)$}
 \lstinputlisting[language=c++]{misc/subsets.cpp}
@@ -467,7 +489,6 @@ Starting in $M_{k} (M_{k} = S_{k}$, all the second indexes are zero, and the fir
     
 With that information, do a binary search in the first sequence ($M_{0}$), with that you'll find the answer to the query in $S_{0}$ being $S_{0{element.first}}$, and then you go to the position element.second of $M_{1}$, and check if element in position element.second-1 is $\geq q$, if it is true, the element you're looking for is element.second-1, otherwise it's element.second. The answer to the current sequence will be in the index that is in the element in the found index (element.second-1 or element.second) .first. Repeat the process until you find the last answer in $M_{k}$
 
-
 \subsubsection{Warnsdorff’s heuristic for knight’s tour}
 At each step choose a square which has the least number of valid moves that the knight can make from there.
 
@@ -479,20 +500,14 @@ Schedule $N$ jobs on 2 machines to minimize completition time. $i$-th job takes 
 Each job must be first executed on the first machine, then on second. Both machines execute all jobs in the same order. Solution: sort jobs by key $a_i < b_i ? a_i : (\infty - b_i)$,
 i.e. first execute all jobs with $a_i < b_i$ in order of increasing $a_i$, then all other jobs in order of decreasing $b_i$.
 
-
 \includefile{c++}{Generate de Bruijin sequence}{misc}{debruijn.cpp}
 A k-ary De Bruijn sequence B(k, n) of order n is a cyclic sequence of a given alphabet A with size k for which every possible subsequence of length n in A appears as a sequence of consecutive characters exactly once.
-
 
 \subsubsection{Josephus}
 \lstinputlisting[language=c++]{misc/josephus.cpp}
 
 \newpage
-\includefile{c++}{LIS O(n log n)}{misc}{lis.cpp}
 
-\newpage
-   \begin{multicols}{2}
-\tableofcontents
-   \end{multicols}
+\includefile{c++}{LIS O(n log n)}{misc}{lis.cpp}
 
 \end{document}
