@@ -1,5 +1,5 @@
 long double romberg(long double a, long double b,
-                    long double(*func)(long double)) {
+                    long double(*func)(long double)){
     long double approx[2][25];
     long double *cur=approx[1], *prev=approx[0];
 
@@ -10,10 +10,10 @@ long double romberg(long double a, long double b,
 
         cur[0] = 1/2.0 * prev[0];
         long double div = (b-a)/pow(2, it);
-        for(long double sample = a + div; sample < b; sample += 2 * div)
+        for (long double sample = a + div; sample < b; sample += 2 * div)
             cur[0] += div * func(a + sample);
 
-        for(int j = 1; j <= it; ++j)
+        for (int j = 1; j <= it; ++j)
             cur[j] = cur[j-1] + 1/(pow(4, it) - 1)*(cur[j-1] + prev[j-1]);
     }
 

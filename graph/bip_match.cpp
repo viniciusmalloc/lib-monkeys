@@ -6,7 +6,7 @@ vector< int > gr[MAXN];  // gr[u] -- edges from u in X to v in Y
 bool seen[MAXN];		
 int m[MAXN], m1[MAXN];   // with whom it's matched
 
-int dfs(int u) {
+int dfs(int u){
 	if (u < 0) return 1;
 	if (seen[u]) return 0;
 	seen[u] = true;
@@ -20,20 +20,20 @@ int dfs(int u) {
 	return 0;
 }
 
-int dfsExp(int u) {
+int dfsExp(int u){
 	for (int i = 0; i < N; ++i) seen[i] = false;
 	return dfs(u);
 }
 
 
-int bipMatch() {
+int bipMatch(){
 	for (int i = 0; i < N; ++i) m[i] = -1;
 	for (int i = 0; i < M; ++i) m1[i] = -1;
 	int aug, ans = 0;
-	do {
+	do{
 		aug = 0;
 		bool first = true;
-		for (int i = 0; i < N; ++i) if (m[i] < 0) {
+		for (int i = 0; i < N; ++i) if (m[i] < 0){
 			if (first) aug += dfsExp(i);
 			else aug += dfs(i);
 			first = false;
@@ -49,7 +49,7 @@ void buildVC( int u ){
 	seen[u] = true;
 	vx[u] = 0;
 	for (size_t w = 0, sz = gr[u].size(); w < sz; ++w)
-        if (gr[u][w] != m[u] && vy[ gr[u][w] ] == 0) {
+        if (gr[u][w] != m[u] && vy[ gr[u][w] ] == 0){
             vy[ gr[u][w] ] = 1;
             if (!seen[ m1[ gr[u][w] ] ]) buildVC(m1[ gr[u][w] ]);
         }

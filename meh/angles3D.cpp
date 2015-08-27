@@ -1,2 +1,0 @@
-//angulo entre dois vetores
-

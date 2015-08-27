@@ -15,7 +15,7 @@ int cmp(cdouble x, cdouble y = 0){
 
 const int MAX = 200;
 
-struct poly {
+struct poly{
 	vector<cdouble> p;
 	int n;
 	
@@ -25,7 +25,7 @@ struct poly {
 	cdouble& operator [](int i){ return p[i]; }
 	
 	//Calcula a derivada de P(x)
-	poly derivate() {
+	poly derivate(){
 		poly r(n-1);
 		FOR(i, 1, n) {
 			r[i-1] = p[i] * cdouble(i);
@@ -35,30 +35,30 @@ struct poly {
 	
 	//Divides P(x) by (x - z)
 	//Returns in the form Q(x) + r
-	pair<poly, cdouble> ruffini(cdouble z) {
+	pair<poly, cdouble> ruffini(cdouble z){
 		if (n == 0) return MP(poly(), 0);
 		poly r(n - 1);
 	
-		RFOR(i, n, 1) {
+		RFOR(i, n, 1){
 			r[i - 1] = r[i] * z + p[i];
 		}	
 	
-		return MP(r, r[0] * z + p[0]);
+		return mp(r, r[0] * z + p[0]);
 	}
 	
 	//Return P(x) mod (x - z)
-	cdouble operator % (cdouble z) {
+	cdouble operator % (cdouble z){
 		return ruffini(z).second;
 	}
 	
-	cdouble find_one_root(cdouble x) {
+	cdouble find_one_root(cdouble x){
 		poly p0 = *this;
 		poly p1 = p0.derivate();
 		poly p2 = p1.derivate();
 		
 		int m = 1000; //gives precision
 		
-		while (m--) {
+		while (m--){
 			cdouble y0 = p0 % x;
 			
 			if (cmp(y0) == 0) break;
@@ -75,11 +75,11 @@ struct poly {
 		return x;
 	}
 	
-	vector<cdouble> roots() {
+	vector<cdouble> roots(){
 		poly q = *this;
 		vector<cdouble> r;
 		
-		while (q.n > 1) {
+		while (q.n > 1){
 			cdouble z(rand() / double(RAND_MAX), rand() / double(RAND_MAX));
 			z = q.find_one_root(z);
 			z = find_one_root(z);

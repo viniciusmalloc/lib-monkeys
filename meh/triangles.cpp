@@ -1,8 +1,6 @@
 //Uses Intersections
 //Closest Point
 
-using namespace std;
-
 double triangle_area(pt a, pt b, pt c){
 	return fabs(cross(a - c, b - c) / 2.0);
 }

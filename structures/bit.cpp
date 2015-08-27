@@ -4,14 +4,14 @@
 
 // bitMask - initialy, it is the greatest bit of MaxVal
 // bitMask store interval which should be searched
-int find(int cumFre) {
+int find(int cumFre){
 	int idx = 0; // this var is result of function
 	
-	while ((bitMask != 0) && (idx < MaxVal)) { // nobody likes overflow :)
+	while ((bitMask != 0) && (idx < MaxVal)){ // nobody likes overflow :)
 		int tIdx = idx + bitMask; // we make midpoint of interval
 		if (cumFre == tree[tIdx]) // if it is equal, we just return idx
 			return tIdx;
-		else if (cumFre > tree[tIdx]){ 
+		else if (cumFre > tree[tIdx]){
 		        // if tree frequency "can fit" into cumFre,
 		        // then include it
 			idx = tIdx; // update index 
@@ -33,9 +33,9 @@ int findG(int cumFre){
 	
 	while ((bitMask != 0) && (idx < MaxVal)){
 		int tIdx = idx + bitMask;
-		if (cumFre >= tree[tIdx]){ 
-		        // if current cumulative frequency is equal to cumFre, 
-		        // we are still looking for higher index (if exists)
+		if (cumFre >= tree[tIdx]){
+		    // if current cumulative frequency is equal to cumFre, 
+		    // we are still looking for higher index (if exists)
 			idx = tIdx;
 			cumFre -= tree[tIdx];
 		}

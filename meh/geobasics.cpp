@@ -9,14 +9,14 @@ typedef vector<pt> polygon;
 
 //Comparison
 int cmp(double a, double b = 0.0){
-	if(a - b > eps) return 1;
-	if(b - a > eps) return -1;
+	if (a - b > eps) return 1;
+	if (b - a > eps) return -1;
 	return 0;
 }
 
 //Tests if c is between a and b
 bool between(double a, double b, double c){
-	if(a > b) swap(a, b);
+	if (a > b) swap(a, b);
 	return cmp(a, c) <= 0 && cmp(c, b) <= 0;
 }
 
@@ -26,18 +26,18 @@ struct pt{
 	
 	pt(double x = 0.0, double y = 0.0) : x(x), y(y) {}
 	
-	double len() { return sqrt(x * x + y * y); }
-	double len2() { return x * x + y * y; }
+	double len(){ return sqrt(x * x + y * y); }
+	double len2(){ return x * x + y * y; }
 	
 	pt normalize(){ return (*this)/len(); }
 	
 	pt operator - (pt p){ return pt(x - p.x, y - p.y); }
 	pt operator + (pt p){ return pt(x + p.x, y + p.y); }
-	pt operator * (double k) { return pt(x * k, y * k); }
-	pt operator / (double k) { return pt(x / k, y / k); }
+	pt operator * (double k){ return pt(x * k, y * k); }
+	pt operator / (double k){ return pt(x / k, y / k); }
 	
-	bool operator < (const pt& p) const{
-		if(cmp(x, p.x)) return x > p.x;
+	bool operator < (const pt& p) const {
+		if (cmp(x, p.x)) return x > p.x;
 		return y < p.y;
 	} 
 	

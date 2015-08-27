@@ -73,7 +73,7 @@
 \includesfile{c++}{Template}{config}{template.cpp}
 
 % --Section-- Combinatorics
-\section{Combinatorics}
+\subsection{Combinatorics}
 \subsubsection{Binomial Coefficients}
 
 Number of ways to pick a multiset of sike $k$ from $n$ elements: $\binom{n+k-1}{k}$\\
@@ -107,7 +107,7 @@ The number of orbits under $G$'s action on set $X$ : $|X/G| = \frac{1}{|G|} \sum
 Let $w(x)$ be weight of $x$'s orbit. Sum of all orbits' weights: $\sum_{o \in X/G}w(o) = \frac{1}{|G|} \sum_{g \in G} \sum_{x \in X_g} w(x)$.
 
 % --Section-- Number Theory
-\section{Number Theory}
+\subsection{Number Theory}
 \subsubsection{Linear diophantine equation}
 $ax + by = c$. Let $d = gcd(a,b)$. A solution exists iff $d|c$. If $(x_0, y_0)$ is any solution, then all solutions are given by $(x, y) = (x_0 + \frac{b}{d}t, y_0 - \frac{a}{d}t), t \in \mathbb{Z}$. To find some solution $(x_0, y_0)$,
 use extended GCD to solve $ax_0 + by_0 = d = gcd(a, b)$, and multiply its solutions by $\frac{c}{d}$.\\
@@ -212,7 +212,7 @@ Odd prime $p$ can be represented as a sum of two squares iff $p \equiv 1 (mod\ 4
 \newpage
 
 % --Section-- String Algorithms
-\section{String Algorithms}
+\subsection{String Algorithms}
 \includefile{c++}{String Hash}{string}{hash.cpp}
 
 \begin{multicols}{2}
@@ -249,7 +249,7 @@ Start with a forest, consisting of isolated vertices. Repeatedly merge two trees
 \newpage
 
 % --Section-- Graphs
-\section{Graphs}
+\subsection{Graphs}
 \subsubsection{Euler’s theorem}
 For any planar graph, $V - E + F = 1 + C$, where $V$ is the number of graph’s vertices, $E$ is the number of edges, $F$ is the number of faces in graph’s planar drawing,
 and $C$ is the number of connected components. Corollary: $V - E + F = 2$ for a 3D polyhedron.
@@ -338,7 +338,7 @@ defined as the common size of $A$ and $P$.
 \newpage
 
 % --Section-- Game Theory
-\section{Games}
+\subsection{Games}
 \subsubsection{Grundy numbers}
 For a two-player, normal-play (last to move wins) game on a graph ($V,E$): $G(x)=mex(\{G(y) : (x,y) \in E\})$, where $mex(S)=min\{n \geq 0 : n \not\in S\}$. $x$ is losing iff $G(x)=0$.
 
@@ -357,7 +357,7 @@ A position with $n$ piles of size 1 is losing iff $n$ is odd.
 \newpage
 
 % --Section-- Math
-\section{Math}
+\subsection{Math}
 \includefile{c++}{Simpson's rule}{meh}{simpson.cpp}
 \includefile{c++}{Polynomials}{meh}{polynomials.cpp}
 \includefile{c++}{Cycle Finding}{meh}{cyclefinding.cpp}
@@ -371,7 +371,7 @@ A position with $n$ piles of size 1 is losing iff $n$ is odd.
 \newpage
 
 % --Section-- Geometry
-\section{Geometry}
+\subsection{Geometry}
 \subsubsection{Pick's theorem}
 $I = A - B/2 + 1$, where $A$ is the area of a lattice polygon, $I$ is the number of lattice points inside it, and $B$ is the number of lattice points on the boundary. Number of lattice points minus one on a line segment from (0, 0) and (x, y) is gcd(x, y).
 

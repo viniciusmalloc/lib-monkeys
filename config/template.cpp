@@ -19,15 +19,8 @@
 
 const double EPS = 1e-9;
 
-int SGN(double a)
-{
-    return ((a > EPS) ? (1) : ((a < -EPS) ? (-1) : (0)));
-}
-
-int CMP(double a, double b)
-{
-    return SGN(a - b);
-}
+int SGN(double a){ return ((a > EPS) ? (1) : ((a < -EPS) ? (-1) : (0))); }
+int CMP(double a, double b){ return SGN(a - b); }
 
 typedef long long int64;
 typedef unsigned long long uint64;
@@ -40,8 +33,7 @@ struct node{
 
 using namespace std;
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]){
     ios::sync_with_stdio(false);
 
     return 0;

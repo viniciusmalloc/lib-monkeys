@@ -1,4 +1,4 @@
-void process() {
+void process(){
     int i, j;
     
     for (i = 0; i < N; i++)
@@ -14,7 +14,7 @@ void process() {
                 P[i][j] = P[P[i][j - 1]][j - 1];
 }
 
-int query(int p, int q) {
+int query(int p, int q){
     int tmp, log, i;
     
     //if p is situated on a higher level than q then we swap them

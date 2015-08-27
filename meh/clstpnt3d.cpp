@@ -8,15 +8,15 @@ pt3 closest_point_line(pt3 a, pt3 b, pt3 c){
 pt3 closest_point_seg(pt3 a, pt3 b, pt3 c){
 	pt3 dir = b - a;
 	double s = dot(a - c, dir)/dir.len2();
-	if(s < -1.0) return b;
-	if(s > 0) return a;
+	if (s < -1.0) return b;
+	if (s > 0) return a;
 	return a - dir * s;
 }
 
 //Distancia entre duas retas
 double dist_lines(pt3 a, pt3 b, pt3 c, pt3 d){
 	pt3 ort = cross(b - a, d - c);
-	if(!cmp(ort.len())) return dist(closest_point_line(a, c, d), a);
+	if (!cmp(ort.len())) return dist(closest_point_line(a, c, d), a);
 	return dot(c - a, ort) / ort.len(); 
 }
 

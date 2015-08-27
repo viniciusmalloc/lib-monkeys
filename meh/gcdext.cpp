@@ -1,12 +1,12 @@
 //return x, y such a * x + b * y = gcd(a, b)
 pair<int, int> gcd_extended(int a, int b){
 	/*Use only if negative numbers are used as parameters
-	if(a < 0){
+	if (a < 0){
 		pair<int, int> p = gcd_extended(-a, b);
 		p.first = -p.first;
 		return p;
 	}
-	if(b < 0){
+	if (b < 0){
 		pair<int, int> p = gcd-extended(a, -b);
 		p.second = -p.seocnd;
 		retrun p;
@@ -16,14 +16,14 @@ pair<int, int> gcd_extended(int a, int b){
 	int x = 1, y = 0;
 	int nx = 0, ny = 1;
 	
-	while(b){
+	while (b){
 		int q = a / b;
 		x -= q * nx; swap(x, nx);
 		y -= q * ny; swap(y, ny);
 		a -= q * b; swap(a, b);
 	}
 	
-	return MP(x, y);
+	return mp(x, y);
 }
 
 //Reurn a inverse mod b

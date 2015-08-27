@@ -12,14 +12,14 @@ void dfs( int u ){
 	scc.push( u );
 	stkd[u] = true;
 	int v;
-	for( size_t i = 0, sz = gr[u].size(); i < sz; i++ ){
+	for ( size_t i = 0, sz = gr[u].size(); i < sz; i++ ){
 		v = gr[u][i];
 		if( lbl[v] == -1 ) dfs( v );
 		if( stkd[v] ) low[u] = min( low[u], low[v] );
 	}
-	if( low[u] == lbl[u] ){  // new component found..
+	if ( low[u] == lbl[u] ){  // new component found...
 		while( !scc.empty() && scc.top() != u ){
-			// .. with this guys
+			// ...with these guys
 			stkd[ scc.top() ] = false;
 			scc.pop(); 
 		}
