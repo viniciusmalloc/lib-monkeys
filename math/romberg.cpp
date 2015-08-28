@@ -1,7 +1,7 @@
 long double romberg(long double a, long double b,
                     long double(*func)(long double)){
     long double approx[2][25];
-    long double *cur=approx[1], *prev=approx[0];
+    long double *cur = approx[1], *prev = approx[0];
 
     prev[0] = 1/2.0 * (b-a) * (func(a) + func(b));
     for(int it = 1; it < 25; ++it, swap(cur, prev)) {

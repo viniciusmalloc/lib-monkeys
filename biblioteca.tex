@@ -55,9 +55,9 @@
 \thispagestyle{fancy}
 \begin{center}
   \Huge\textsc{Universidade Federal de Goiás \\ Team Reference Material}
-	
-	\
-	\small 2015 South America/Brazil Regional Contest
+  
+  \
+  \small 2015 South America/Brazil Regional Contest
 \end{center}
 
 \begin{multicols}{2}
@@ -65,10 +65,6 @@
 \end{multicols}
 
 \
-
-%\includegraphics[scale=.65]{config/toctoc.png}
-
-\newpage
 
 \includesfile{c++}{Template}{config}{template.cpp}
 
@@ -114,7 +110,6 @@ use extended GCD to solve $ax_0 + by_0 = d = gcd(a, b)$, and multiply its soluti
 Linear diophantine equation in $n$ variables: $a_1x_1 + ... + a_nx_n = c$ has solutions iff $gcd(a_1, ..., a_n) | c$. To find some solution, let $b = gcd(a_2, ..., a_n)$, solve $a_1x_1 + by = c$, and iterate with $a_2x_2 + ... = y$.
 
 \newpage
-
 \includefile{c++}{Extended GCD}{meh}{gcdext.cpp}
 
 $a^{-1} (mod\ n) = a^{\phi(n)-1}$
@@ -129,15 +124,14 @@ System $x \equiv a (mod\ m), x \equiv b (mod\ n)$ has solutions iff $a \equiv b 
 $\pi(n) = |\{p \leq n : p\ is\ prime\}|$. $n / ln(n) < \pi(n) < 1.3n / ln(n)$. $\pi(1000) = 168, \pi(10^6) = 78498, \pi(10^9) = 50 847 534$. $n$-th prime $\approx n ln(n)$.
 
 \newpage
-
 \includefile{c++}{Fast Sieve}{math}{sieve.cpp}
 
 \includefile{c++}{Miller-Rabin's primality test}{math}{miller_rabin.cpp}
 Given $n = 2^{r}s + 1$ with odd s, and a random integer $1 < a < n$. If $a^{s} \equiv 1 (mod\ n)$ or $a^{2^{j}s} \equiv -1 (mod\ n)$ for some $0 \leq j \leq r-1$, then $n$ is a probable prime.
 
 \newpage
-
 \includefile{c++}{Pollard-$\rho$}{math}{pollard.cpp}
+
 Choose random $x_1$, and let $x_{i+1} = x_{i}^{2} (mod\ n)$. Test $gcd(n,x_{2^k+i} - x_{2^k})$ as possible $n$'s factors for $k = 0, 1, ...$ Expected time to find a factor: $O(\sqrt{m})$, where $m$ is smallest prime power in $n$'s factorization. That's $O(n^{1/4})$ if you check $n = p^k$ as a special case before factorization.
 
 \subsubsection{Fermat primes}
@@ -150,8 +144,8 @@ $n > 1$ is called perfect if it equals sum of its proper divisors and 1. Even $n
 A positive composite $n$ is a Carmichael number $(a^{n-1} \equiv 1 (mod\ n)$ for all $a: gcd(a,n) = 1)$, iff $n$ is square-free, and for all prime divisors $p$ of $n$, $p-1$ divides $n-1$.
 
 \newpage
-
 \includefile{c++}{Number/sum of divisors}{meh}{sigma.cpp}
+
 $\tau(p_1^{a_1}...p_k^{a_k}) = \prod_{j=1}^{k}(a_j + 1).$
 
 $\sigma(p_1^{a_1}...p_k^{a_k}) = \prod_{j=1}^{k}\frac{p_{j}^{a_j+1}-1}{p_j-1}.$
@@ -180,7 +174,7 @@ Let $f$, $F$ be functions on positive integers. If for all $n \in \mathbb{N}$, $
 $\phi(n) = \sum_{d|n}\mu(d)\frac{n}{d}$.\\
 $\sum_{d|n}\mu(d) = 1$.\\
 If $f$ is multiplicative, then $\sum_{d|n}\mu(d)f(d) = \prod_{p|n}(1-f(p))$, $\sum_{d|n}\mu(d)^2f(d) = \prod_{p|n}(1+f(p))$\\
-f[i] = 1, f[p] = -1, f[j] *= (j\%(i*i)==0)? 0 : -1;
+f[i] = 1, f[p] = -1, f[j] *= (j\%(i*i)==0) ? 0 : -1;
 
 \subsubsection{Legendre symbol}
 If $p$ is an odd prime, $a \in \mathbb{Z}$, then $(\frac{a}{p})$ equals 0, if $p|a$; 1 if $a$ is a quadratic residue modulo $p$; and -1 otherwise. Euler's criterion: $(\frac{a}{p}) = a^{(\frac{p-1}{2})} (mod\ p)$.
@@ -217,18 +211,18 @@ Odd prime $p$ can be represented as a sum of two squares iff $p \equiv 1 (mod\ 4
 
 \begin{multicols}{2}
   \subsubsection{Prefix Function}
-	\lstinputlisting[language=c++]{string/prefixfunc.cpp}
-	
-	\subsubsection{Z Function}
-	\lstinputlisting[language=c++]{string/zfunc.cpp}
+  \lstinputlisting[language=c++]{string/prefixfunc.cpp}
+  
+  \subsubsection{Z Function}
+  \lstinputlisting[language=c++]{string/zfunc.cpp}
 \end{multicols}
 
 \includefile{c++}{Manacher}{string}{manacher.cpp}
 \includefile{c++}{Aho-Corasick}{string}{aho.cpp}
 
 \newpage
-
 \includefile{c++}{Suffix Array O(n log n)}{string}{suffix_array.cpp}
+
 \newpage
 \includefile{c++}{Suffix Array O(n)}{string}{karkkainen.cpp}
 \includefile{c++}{Suffix Automata}{string}{suffixaut.cpp}
@@ -238,6 +232,7 @@ Odd prime $p$ can be represented as a sum of two squares iff $p \equiv 1 (mod\ 4
   \item All occurrences: same as before, but must follow inverse suffix links and don't print clones.
 \end{itemize}
 
+\newpage
 \subsubsection{Burrows-Wheeler inverse transform}
 Let B[1..n] be the input (last column of sorted matrix of string's rotations). Get the first column, A[1...n], by sorting B. For each $k$-th occurrence of a character $c$ at index $i$ in A, let next[i] be the index of corresponding $k-th$ occurrence of $c$ in $B$. The $r$-th row of the matrix is A[r], A[next[r]], A[next[next[r]]], ... 
 
@@ -250,6 +245,10 @@ Start with a forest, consisting of isolated vertices. Repeatedly merge two trees
 
 % --Section-- Graphs
 \subsection{Graphs}
+\includefile{c++}{Hopcroft-Karp}{graph}{bip_match.cpp}
+For any graph, if it has an even cycle, this graph is bipartite
+
+\newpage
 \subsubsection{Euler’s theorem}
 For any planar graph, $V - E + F = 1 + C$, where $V$ is the number of graph’s vertices, $E$ is the number of edges, $F$ is the number of faces in graph’s planar drawing,
 and $C$ is the number of connected components. Corollary: $V - E + F = 2$ for a 3D polyhedron.
@@ -259,8 +258,6 @@ Let $M$, $C$, $I$ be a max matching, a min vertex cover, and a max independent s
 Given a bipartite graph with partitions $(A,B)$, build a network: connect source to $A$, and $B$ to sink with edges of capacities, equal to the corresponding nodes’ weights, or 1 in the unweighted case.
 Set capacities of the original graph’s edges to the infinity. Let $(S,T)$ be a minimum $s-t$ cut. 
 Then a maximum(-weighted) independent set is $I = (A \bigcap S) \bigcup (B \bigcap T)$, and a minimum(-weighted) vertex cover is $C = (A \bigcap T) \bigcup (B \bigcap S)$.
-
-\includefile{c++}{Hopcroft-Karp}{graph}{bip_match.cpp}
 
 \subsubsection{Matrix-tree theorem}
 Let matrix $T = [t_{ij}]$, where $t_{ij}$ is the number of multiedges between $i$ and $j$, for $i \neq j$, and $t_{ii} = -deg_i$.
@@ -275,14 +272,19 @@ Euler tour in an undirected graph exists iff the graph is connected and each ver
 Construction:\\
 \includegraphics[scale=.7]{graph/euler}
 
+\newpage
 \subsubsection{Stable marriage problem}
 While there is a free man $m$: let $w$ be the most-preferred woman to whom he has not yet proposed, and propose $m$ to $w$. If $w$ is free, or is engaged to someone whom she prefers less than $m$, match $m$ with $w$, else deny proposal.
+\begin{multicols}{2}
+  \lstinputlisting[language=c++]{graph/stable_marriage.cpp}
+\end{multicols}
 
+\newpage
 \subsubsection{Stoer-Wagner}
 Start from a set $A$ containing an arbitrary vertex. While $A \neq V$, add to $A$ the most tightly connected vertex ($z \not\in A$ such that $\sum_{x\in A}w(x,z)$ is maximized.)
 Store cut-of-the-phase (the cut between the last added vertex and rest of the graph), and merge the two vertices added last. Repeat until the graph is contracted to a single vertex. Minimum cut is one of the cuts-of-the-phase.
 \begin{multicols}{2}
-	\lstinputlisting[language=c++]{graph/stoer_wagner.cpp}
+  \lstinputlisting[language=c++]{graph/stoer_wagner.cpp}
 \end{multicols}
 
 \subsubsection{Tarjan’s offline LCA algorithm}
@@ -301,20 +303,28 @@ and a partition of the order into a family $P$ of chains, such that the number o
 element from each member of $P$. Similarly, $P$ must be the smallest family of chains into which the order can be partitioned, for any partition into chains must have at least one chain per element of $A$. The width of the partial order is
 defined as the common size of $A$ and $P$. 
 
-\includefile{c++}{Floyd-Warshall reconstructing path}{graph}{floyd_warshall.cpp}
+\newpage
 \includefile{c++}{Tarjan algorithm for articulation points}{graph}{tarjan_articulation.cpp}
 \includefile{c++}{Tarjan algorithm for brigdes}{graph}{tarjan_bridges.cpp}
+
+\newpage
 \includefile{c++}{Tarjan algorithm for strongly connected components}{graph}{tarjan_scc.cpp}
+\includefile{c++}{Floyd-Warshall reconstructing path}{graph}{floyd_warshall.cpp}
+
+\newpage
 \includefile{c++}{Busacker Gowen}{graph}{busacker_gowen.cpp}
 
 \newpage
-
 \includefile{c++}{Dinic}{graph}{dinic.cpp}
-\includefile{c++}{Edmonds Karp}{graph}{edmonds_karp.cpp}
-\includefile{c++}{Gabow}{graph}{gabow.cpp}
 
 \newpage
+\includefile{c++}{Edmonds Karp}{graph}{edmonds_karp.cpp}
 
+\newpage
+\includefile{c++}{Gabow}{graph}{gabow.cpp}
+\includefile{c++}{Union Find}{graph}{union_find.cpp}
+
+\newpage
 \includefile{c++}{Gomory Hu Tree}{graph}{gomory_hu.cpp}
 \includefile{c++}{Kuhn Munkres}{graph}{kuhn_munkres.cpp}
 \includefile{c++}{Link Cut Tree}{graph}{link_cut.cpp}
@@ -325,12 +335,12 @@ defined as the common size of $A$ and $P$.
 
 \newpage
 
+% --Section-- Data Structures
 \subsection{Data structures}
 \includefile{c++}{Treap}{structures}{treap.cpp}
 \includefile{c++}{AVL Tree}{structures}{avl.cpp}
 
 \newpage
-
 \includefile{c++}{Find index with given cumulative frequency}{structures}{bit.cpp}
 \includefile{c++}{Heap}{structures}{heap.cpp}
 \includefile{c++}{Big Integer}{structures}{bignum.cpp}
@@ -358,15 +368,20 @@ A position with $n$ piles of size 1 is losing iff $n$ is odd.
 
 % --Section-- Math
 \subsection{Math}
-\includefile{c++}{Simpson's rule}{meh}{simpson.cpp}
 \includefile{c++}{Polynomials}{meh}{polynomials.cpp}
+\includefile{c++}{Simpson's rule}{meh}{simpson.cpp}
 \includefile{c++}{Cycle Finding}{meh}{cyclefinding.cpp}
 \includefile{c++}{Romberg's Method}{math}{romberg.cpp}
 
 \newpage
-
 \includefile{c++}{FFT}{math}{fft.cpp}
+
+\newpage
 \includefile{c++}{Simplex}{math}{simplex.cpp}
+
+\subsubsection{Log properties}
+    $log(a^n) = n*log(a)$ \\
+    $log(n!) = \sum_{i=1}^{n} log(i)$
 
 \newpage
 
@@ -509,5 +524,7 @@ A k-ary De Bruijn sequence B(k, n) of order n is a cyclic sequence of a given al
 \newpage
 
 \includefile{c++}{LIS O(n log n)}{misc}{lis.cpp}
+
+\includefile{c++}{Fast Input}{misc}{fast_input.cpp}
 
 \end{document}
