@@ -1,49 +1,37 @@
-struct el { int n, d; } heap[MAXV]; int where[MAXV];
-int prev_edge[MAXE], weight[MAXE], adj[MAXE], dist[MAXV], last_edge[MAXV];
-int nedges;
+typedef pair<int, int> ii;
 
-void d_init() {
-    nedges = 0;
-    memset(last_edge, -1, sizeof last_edge);
-}
+int dist[MAXV];
+bool visited[MAXV];
+vector<ii> grafo[MAXV];
 
-void d_edge(int v, int w, int eweight) {
-    prev_edge[nedges] = last_edge[v];
-    weight[nedges] = eweight;
-    adj[nedges] = w;
-    last_edge[v] = nedges++;
-}
+/*	Verifiquem se o grafo esta indexado de 0 ou 1,
+	para nao receberem resposta errada*/
 
-void d_swap(int a, int b) {
-    swap(heap[a], heap[b]);
-    swap(where[heap[a].n], where[heap[b].n]);
-}
-
-void decrease_key(int n, int d) {
-    heap[where[n]].d = d;
-    for(int cur = where[n], up; cur && d < heap[up = (cur-1)/2].d; cur = up)
-        d_swap(cur, up);
-}
-
-int pop_heap(int& sz) {
-    int cur = 0;
-    for(int next = 2; next < sz; cur = next, next = 2*next+2) {
-        if(heap[next].d > heap[next-1].d) next--;
-        d_swap(next, cur);
+int dijkstra(int s, int t){
+	for (int i = 0; i < N; ++i){
+        dist[i] = INF;
+        visited[i] = false;
     }
-    d_swap(cur, sz-1);
-    return heap[--sz].n;
-}
-
-void dijkstra(int s, int sz = MAXV) {
-    for(int i = 0; i < sz; ++i)
-        heap[i].n = where[i] = i, heap[i].d = dist[i] = 0x3f3f3f3f;
-    decrease_key(s, dist[s] = 0);
-
-    while(sz)
-        for(int v = pop_heap(sz), i = last_edge[v]; i != -1; i = prev_edge[i]) {
-            int w = adj[i];
-            if(dist[v] + weight[i] < dist[w])
-                decrease_key(w, dist[w] = dist[v] + weight[i]);
-        }
+    priority_queue<ii> pq;
+    pq.push( make_pair(0, s) );
+    dist[s] = 0;
+    
+    ii atual;
+    //vector<ii>::iterator it;
+    
+    while (!pq.empty()){
+		atual = pq.top(); pq.pop();
+		int custo = -atual.first;
+		int v = atual.second;
+		if ( visited[v] ) continue; 
+		visited[v] = true;
+		for (int i = 0; i < grafo[v].size(); ++i){
+			ii it = grafo[v][i];
+			if (dist[it.first] > custo + it.second){
+				dist[it.first] = custo + it.second;
+				pq.push( make_pair( -dist[it.first], it.first ) );
+			}
+		}
+    }
+    return dist[t];
 }

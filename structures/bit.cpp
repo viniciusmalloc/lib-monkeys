@@ -1,48 +1,21 @@
-// if in tree exists more than one index with a same
-// cumulative frequency, this procedure will return 
-// some of them (we do not know which one)
+#define MAX 10000 //bit size
 
-// bitMask - initialy, it is the greatest bit of MaxVal
-// bitMask store interval which should be searched
-int find(int cumFre){
-    int idx = 0; // this var is result of function
-    
-    while ((bitMask != 0) && (idx < MaxVal)){ // nobody likes overflow :)
-        int tIdx = idx + bitMask; // we make midpoint of interval
-        if (cumFre == tree[tIdx]) // if it is equal, we just return idx
-            return tIdx;
-        else if (cumFre > tree[tIdx]){
-                // if tree frequency "can fit" into cumFre,
-                // then include it
-            idx = tIdx; // update index 
-            cumFre -= tree[tIdx]; // set frequency for next loop 
+int ft[MAX];
+
+//range to count
+int rsq(int a, int b){
+    if ( a == 0 ){
+        int sum = 0;
+        for ( ; b >= 0; b = (b & (b + 1)) - 1 ){
+            sum += ft[b];
         }
-        bitMask >>= 1; // half current interval
+        return sum;
     }
-    if (cumFre != 0) // maybe given cumulative frequency doesn't exist
-        return -1;
-    else
-        return idx;
+    else return rsq(0, b) - rsq(0, a-1);
 }
 
-// if in tree exists more than one index with a same
-// cumulative frequency, this procedure will return 
-// the greatest one
-int findG(int cumFre){
-    int idx = 0;
-    
-    while ((bitMask != 0) && (idx < MaxVal)){
-        int tIdx = idx + bitMask;
-        if (cumFre >= tree[tIdx]){
-            // if current cumulative frequency is equal to cumFre, 
-            // we are still looking for higher index (if exists)
-            idx = tIdx;
-            cumFre -= tree[tIdx];
-        }
-        bitMask >>= 1;
-    }
-    if (cumFre != 0)
-        return -1;
-    else
-        return idx;
+//add to the k-th element value
+void adjust(int k, int value){
+    for ( ; k <= t.size(); k |= k + 1 )
+        ft[k] += value;
 }

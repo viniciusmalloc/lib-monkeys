@@ -1,13 +1,8 @@
-/* 
-    init: p[i][j] = i;
-    if (i,k)+(k,j) < (i,j)
-     p[i][j] = p[k][j]
-*/
-
-void show( int from, int to ){
-    if( from != to ){
-        show( from, p[from][to] );
-        cout << " ";
-    }
-    cout << to;
+for (int k = 0; k < N; k++){
+	for (int i = 0; i < N; i++){
+		for (int j = 0; j < N; j++){
+			if (graph[i][j] > graph[i][k] + graph[k][j])
+				graph[i][j] = graph[i][k] + graph[k][j];
+		}
+	}
 }

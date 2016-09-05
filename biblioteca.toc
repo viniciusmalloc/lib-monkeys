@@ -13,9 +13,9 @@
 \contentsline {subsubsection}{Chinese Remainder Theorem}{5}
 \contentsline {subsubsection}{Extended GCD}{6}
 \contentsline {subsubsection}{Prime-counting function}{6}
-\contentsline {subsubsection}{Fast Sieve}{7}
+\contentsline {subsubsection}{Fast Sieve (N\IeC {\'u}meros primos)}{7}
 \contentsline {subsubsection}{Miller-Rabin's primality test}{7}
-\contentsline {subsubsection}{Pollard-$\rho $}{8}
+\contentsline {subsubsection}{Pollard-$\rho $ (Fatoriza\IeC {\c c}\IeC {\~a}o Int.)}{8}
 \contentsline {subsubsection}{Fermat primes}{8}
 \contentsline {subsubsection}{Perfect numbers}{8}
 \contentsline {subsubsection}{Carmichael numbers}{8}
@@ -43,89 +43,84 @@
 \contentsline {subsubsection}{Burrows-Wheeler inverse transform}{17}
 \contentsline {subsubsection}{Huffman's algorithm}{17}
 \contentsline {subsection}{Graphs}{18}
-\contentsline {subsubsection}{Hopcroft-Karp}{18}
+\contentsline {subsubsection}{Hopcroft-Karp (Matching Bipartido)}{18}
 \contentsline {subsubsection}{Euler\IeC {\textquoteright }s theorem}{19}
 \contentsline {subsubsection}{Vertex covers and independent sets}{19}
 \contentsline {subsubsection}{Matrix-tree theorem}{19}
 \contentsline {subsubsection}{Prufer code of a tree}{19}
 \contentsline {subsubsection}{Euler tours}{19}
-\contentsline {subsubsection}{Stable marriage problem}{20}
-\contentsline {subsubsection}{Stoer-Wagner}{21}
-\contentsline {subsubsection}{Tarjan\IeC {\textquoteright }s offline LCA algorithm}{22}
-\contentsline {subsubsection}{Erdos-Gallai theorem}{22}
+\contentsline {subsubsection}{Stable marriage problem (Lobos Stark)}{20}
+\contentsline {subsubsection}{Stoer-Wagner (Corte m\IeC {\'\i }nimo - Fluxo)}{21}
+\contentsline {subsubsection}{Erdos-Gallai theorem}{21}
 \contentsline {subsubsection}{Dilworth's theorem}{22}
-\contentsline {subsubsection}{Tarjan algorithm for articulation points}{23}
-\contentsline {subsubsection}{Tarjan algorithm for brigdes}{23}
+\contentsline {subsubsection}{Tarjan algorithm for articulation points (V\IeC {\'e}rtice)}{23}
+\contentsline {subsubsection}{Tarjan algorithm for brigdes (Aresta)}{23}
 \contentsline {subsubsection}{Tarjan algorithm for strongly connected components}{24}
-\contentsline {subsubsection}{Floyd-Warshall reconstructing path}{24}
-\contentsline {subsubsection}{Busacker Gowen}{25}
-\contentsline {subsubsection}{Dinic}{26}
-\contentsline {subsubsection}{Edmonds Karp}{27}
-\contentsline {subsubsection}{Gabow (Maximum weighted matching in general graghs)}{28}
-\contentsline {subsubsection}{Union Find}{29}
-\contentsline {subsubsection}{Gomory Hu Tree}{30}
-\contentsline {subsubsection}{Kuhn Munkres (Maximum weighted bipartite matching)}{30}
-\contentsline {subsubsection}{Link Cut Tree}{31}
-\contentsline {subsubsection}{Heavy Light Decomposition}{31}
-\contentsline {subsubsection}{LCA / PD}{32}
-\contentsline {subsubsection}{Fast Dijkstra}{33}
-\contentsline {subsection}{Data structures}{34}
-\contentsline {subsubsection}{Treap}{34}
-\contentsline {subsubsection}{AVL Tree}{35}
-\contentsline {subsubsection}{Find index with given cumulative frequency}{36}
-\contentsline {subsubsection}{Heap}{36}
-\contentsline {subsubsection}{Big Integer}{37}
-\contentsline {subsection}{Games}{39}
-\contentsline {subsubsection}{Grundy numbers}{39}
-\contentsline {subsubsection}{Sums of games}{39}
-\contentsline {subsubsection}{Mis\IeC {\`e}re Nim}{39}
-\contentsline {subsection}{Math}{40}
-\contentsline {subsubsection}{Polynomials}{40}
-\contentsline {subsubsection}{Simpson's rule}{41}
-\contentsline {subsubsection}{Cycle Finding}{41}
-\contentsline {subsubsection}{Romberg's Method}{41}
-\contentsline {subsubsection}{FFT}{42}
-\contentsline {subsubsection}{Simplex}{43}
-\contentsline {subsubsection}{Matrix Exp}{43}
-\contentsline {subsection}{Geometry}{44}
-\contentsline {subsubsection}{Pick's theorem}{44}
-\contentsline {subsubsection}{Line}{44}
-\contentsline {subsubsection}{Projection}{44}
-\contentsline {subsubsection}{Segment-segment intersection}{44}
-\contentsline {subsubsection}{Circle-circle and circle-line intersection}{45}
-\contentsline {subsubsection}{Circle from 3 points (circumcircle)}{45}
-\contentsline {subsubsection}{Angular bisector}{45}
-\contentsline {subsubsection}{Counter-clockwise rotation around the origin}{45}
-\contentsline {subsubsection}{3D rotation}{45}
-\contentsline {subsubsection}{Plane equation from 3 points}{45}
-\contentsline {subsubsection}{3D figures}{46}
-\contentsline {subsubsection}{Area of a simple polygon}{46}
-\contentsline {subsubsection}{Winding number}{46}
-\contentsline {subsubsection}{Range Tree}{46}
-\contentsline {subsubsection}{KD Tree}{47}
-\contentsline {subsubsection}{Enclosing Circle}{48}
-\contentsline {subsubsection}{Line Sweep Applications}{48}
-\contentsline {subsubsection}{Closest Points}{49}
-\contentsline {subsubsection}{ISECT Primitives}{50}
-\contentsline {subsubsection}{Misc Primitives}{50}
-\contentsline {subsubsection}{Point}{50}
-\contentsline {subsubsection}{Polygon Primitives}{51}
-\contentsline {subsubsection}{Convex Hull}{51}
-\contentsline {subsection}{Dynamic Programming}{52}
-\contentsline {subsubsection}{Longest Ascending Subsequence}{52}
-\contentsline {subsubsection}{Integer Partitioning}{53}
-\contentsline {subsubsection}{Edit Distance (with path recovery)}{54}
-\contentsline {subsubsection}{Maximum Submatrix Sum}{55}
-\contentsline {subsubsection}{Edit distance between two strings}{56}
-\contentsline {subsubsection}{Transpose String}{59}
-\contentsline {subsection}{Miscellaneous}{61}
-\contentsline {subsubsection}{Subsets of a subset in $O(3^n)$}{61}
-\contentsline {subsubsection}{Fractional Cascading}{61}
-\contentsline {subsubsection}{Warnsdorff\IeC {\textquoteright }s heuristic for knight\IeC {\textquoteright }s tour}{61}
-\contentsline {subsubsection}{Optimal BST - Knuth Optimization}{61}
-\contentsline {subsubsection}{Flow-shop scheduling (Johnson\IeC {\textquoteright }s problem)}{61}
-\contentsline {subsubsection}{Generate de Bruijin sequence}{62}
-\contentsline {subsubsection}{Josephus}{62}
-\contentsline {subsubsection}{LIS O(n log n)}{62}
-\contentsline {subsubsection}{Fast Input}{63}
-\contentsline {subsubsection}{Fraction}{63}
+\contentsline {subsubsection}{Floyd-Warshall (Menor caminho, todos os pares)}{24}
+\contentsline {subsubsection}{Dinic (Fluxo m\IeC {\'a}ximo)}{25}
+\contentsline {subsubsection}{Edmonds-Karp (Fluxo m\IeC {\'a}ximo)}{26}
+\contentsline {subsubsection}{Gabow (Maximum weighted matching in general graghs)}{27}
+\contentsline {subsubsection}{Union Find}{28}
+\contentsline {subsubsection}{Kuhn-Munkres (Maximum weighted bipartite matching)}{29}
+\contentsline {subsubsection}{Link Cut Tree}{29}
+\contentsline {subsubsection}{Heavy Light Decomposition}{30}
+\contentsline {subsubsection}{LCA / PD (Menor ancestral comum)}{31}
+\contentsline {subsubsection}{Fast Dijkstra}{31}
+\contentsline {subsection}{Data structures}{32}
+\contentsline {subsubsection}{Treap}{32}
+\contentsline {subsubsection}{AVL Tree}{33}
+\contentsline {subsubsection}{Find index with given cumulative frequency (BIT)}{34}
+\contentsline {subsubsection}{Heap}{34}
+\contentsline {subsection}{Games}{35}
+\contentsline {subsubsection}{Grundy numbers}{35}
+\contentsline {subsubsection}{Sums of games}{35}
+\contentsline {subsubsection}{Mis\IeC {\`e}re Nim}{35}
+\contentsline {subsection}{Math}{36}
+\contentsline {subsubsection}{Polynomials}{36}
+\contentsline {subsubsection}{Cycle Finding}{37}
+\contentsline {subsubsection}{Romberg's Method (Integral finita)}{37}
+\contentsline {subsubsection}{FFT (Fourier)}{38}
+\contentsline {subsubsection}{Simplex}{39}
+\contentsline {subsubsection}{Matrix Exp}{39}
+\contentsline {subsection}{Geometry}{40}
+\contentsline {subsubsection}{Pick's theorem}{40}
+\contentsline {subsubsection}{Line}{40}
+\contentsline {subsubsection}{Projection}{40}
+\contentsline {subsubsection}{Segment-segment intersection}{40}
+\contentsline {subsubsection}{Circle-circle and circle-line intersection}{41}
+\contentsline {subsubsection}{Circle from 3 points (circumcircle)}{41}
+\contentsline {subsubsection}{Angular bisector}{41}
+\contentsline {subsubsection}{Counter-clockwise rotation around the origin}{41}
+\contentsline {subsubsection}{3D rotation}{41}
+\contentsline {subsubsection}{Plane equation from 3 points}{41}
+\contentsline {subsubsection}{3D figures}{42}
+\contentsline {subsubsection}{Area of a simple polygon}{42}
+\contentsline {subsubsection}{Winding number}{42}
+\contentsline {subsubsection}{Range Tree}{42}
+\contentsline {subsubsection}{KD Tree}{43}
+\contentsline {subsubsection}{Enclosing Circle}{44}
+\contentsline {subsubsection}{Line Sweep Applications}{44}
+\contentsline {subsubsection}{Closest Points}{45}
+\contentsline {subsubsection}{ISECT Primitives}{46}
+\contentsline {subsubsection}{Misc Primitives}{46}
+\contentsline {subsubsection}{Point}{46}
+\contentsline {subsubsection}{Polygon Primitives}{47}
+\contentsline {subsubsection}{Convex Hull}{47}
+\contentsline {subsection}{Dynamic Programming}{48}
+\contentsline {subsubsection}{Longest Ascending Subsequence}{48}
+\contentsline {subsubsection}{Integer Partitioning}{49}
+\contentsline {subsubsection}{Edit Distance (with path recovery)}{50}
+\contentsline {subsubsection}{Maximum Submatrix Sum}{51}
+\contentsline {subsubsection}{Edit distance between two strings}{52}
+\contentsline {subsubsection}{Transpose String}{55}
+\contentsline {subsection}{Miscellaneous}{57}
+\contentsline {subsubsection}{Subsets of a subset in $O(3^n)$}{57}
+\contentsline {subsubsection}{Fractional Cascading}{57}
+\contentsline {subsubsection}{Warnsdorff\IeC {\textquoteright }s heuristic for knight\IeC {\textquoteright }s tour}{57}
+\contentsline {subsubsection}{Optimal BST - Knuth Optimization}{57}
+\contentsline {subsubsection}{Flow-shop scheduling (Johnson\IeC {\textquoteright }s problem)}{57}
+\contentsline {subsubsection}{Generate de Bruijin sequence}{58}
+\contentsline {subsubsection}{Josephus}{58}
+\contentsline {subsubsection}{LIS O(n log n) (Maior Seq. Crescente)}{58}
+\contentsline {subsubsection}{Fast Input}{59}
+\contentsline {subsubsection}{Fraction}{59}
