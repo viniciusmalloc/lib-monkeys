@@ -2,11 +2,11 @@
 #define BASE 33ULL
 #define VALUE(c) ((c)-'a')
 
-typedef unsigned long long hash;
+typedef unsigned long long int64;
 
-hash h[MAXN], pw[MAXN];
+int64 h[MAXN], pw[MAXN];
 
-hash calc_hash(int beg, int end){
+int64 calc_hash(int beg, int end){
     return h[end] - h[beg]*pw[end-beg];
 }
 

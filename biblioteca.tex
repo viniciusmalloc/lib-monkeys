@@ -68,6 +68,8 @@
 
 \includesfile{c++}{Template}{config}{template.cpp}
 
+\newpage
+
 % --Section-- Combinatorics
 \subsection{Combinatorics}
 \subsubsection{Binomial Coefficients}
@@ -77,9 +79,15 @@ Number of $n$-tuples of non-negative integers with sum $s$: $\binom{s+n-1}{n-1}$
 Number of $n$-tuples of positive integers with sum $s$: $\binom{s-1}{n-1}$\\
 Number of lattice paths from $(0,0)$ to $(a,b)$, restricted to east and north steps: $\binom{a+b}{a}$
 
-$v_{r,c} = v_{r,c-1} \frac{r+1-c}{c}$
+\subsubsection{Pascal Triangle}
 
-$x = r_0$; $y = 1$; $a_{r,c} = a_{r-1,c-1}  \frac{++x}{++y}, r \geq r_0+2, c \geq 2$
+$v_{r,c} = v_{r,c-1} \frac{r+1-c}{c}$ \\
+$x = r_0$; $y = 1$; $a_{r,c} = a_{r-1,c-1}  \frac{++x}{++y}, r \geq r_0+2, c \geq 2$ \\ \\
+Line on a Pascal Triangle: $c(n, k+1) = c(n, k) \times \frac{n-k}{k+1}$
+
+\subsubsection{Log properties}
+$log(a^n) = n \times log(a)$ \\
+$log(n!) = \sum_{i=1}^{n} log(i)$
 
 \subsubsection{Catalan numbers}
 $C_{n} = \frac{1}{n+1}\binom{2n}{n}$. $C_0 = 1$,  $C_{n} = \sum_{i=0}^{n-1}C_iC_{n-1-i}$. $C_{n+1} = C_{n}\frac{4n+2}{n+2}$.\\
@@ -109,16 +117,16 @@ $ax + by = c$. Let $d = gcd(a,b)$. A solution exists iff $d|c$. If $(x_0, y_0)$ 
 use extended GCD to solve $ax_0 + by_0 = d = gcd(a, b)$, and multiply its solutions by $\frac{c}{d}$.\\
 Linear diophantine equation in $n$ variables: $a_1x_1 + ... + a_nx_n = c$ has solutions iff $gcd(a_1, ..., a_n) | c$. To find some solution, let $b = gcd(a_2, ..., a_n)$, solve $a_1x_1 + by = c$, and iterate with $a_2x_2 + ... = y$.
 
+\subsubsection{Chinese Remainder Theorem}
+System $x \equiv a_i (mod\ m_i)$ for $i = 1, ..., n$ with pairwise relatively prime $m_i$ has a unique solution modulo $M = m_1m_2...m_n : x = a_1b_1\frac{M}{m_1} + ... + a_nb_n\frac{M}{m_n} (mod\ M)$, where $b_i$ is modular inverse of $\frac{M}{M_i}$ modulo $m_i$.\\
+System $x \equiv a (mod\ m), x \equiv b (mod\ n)$ has solutions iff $a \equiv b (mod\ g)$, where $g = gcd(m,n)$. The solution is unique modulo $L = \frac{mn}{g}$, and equals: $x \equiv a + T(b-a)m/g \equiv b + S(a-b)n/g (mod\ L)$, where $S$ and $T$ are integer solutions of $mT + nS = gcd(m,n)$.
+
 \newpage
 \includefile{c++}{Extended GCD}{meh}{gcdext.cpp}
 
 $a^{-1} (mod\ n) = a^{\phi(n)-1}$
 
 $n\ prime \rightarrow a^{-1} (mod\ n) = a^{n-2}$
-
-\subsubsection{Chinese Remainder Theorem}
-System $x \equiv a_i (mod\ m_i)$ for $i = 1, ..., n$ with pairwise relatively prime $m_i$ has a unique solution modulo $M = m_1m_2...m_n : x = a_1b_1\frac{M}{m_1} + ... + a_nb_n\frac{M}{m_n} (mod\ M)$, where $b_i$ is modular inverse of $\frac{M}{M_i}$ modulo $m_i$.\\
-System $x \equiv a (mod\ m), x \equiv b (mod\ n)$ has solutions iff $a \equiv b (mod\ g)$, where $g = gcd(m,n)$. The solution is unique modulo $L = \frac{mn}{g}$, and equals: $x \equiv a + T(b-a)m/g \equiv b + S(a-b)n/g (mod\ L)$, where $S$ and $T$ are integer solutions of $mT + nS = gcd(m,n)$.
 
 \subsubsection{Prime-counting function}
 $\pi(n) = |\{p \leq n : p\ is\ prime\}|$. $n / ln(n) < \pi(n) < 1.3n / ln(n)$. $\pi(1000) = 168, \pi(10^6) = 78498, \pi(10^9) = 50 847 534$. $n$-th prime $\approx n ln(n)$.
@@ -321,17 +329,16 @@ defined as the common size of $A$ and $P$.
 \includefile{c++}{Edmonds Karp}{graph}{edmonds_karp.cpp}
 
 \newpage
-\includefile{c++}{Gabow}{graph}{gabow.cpp}
+\includefile{c++}{Gabow (Maximum weighted matching in general graghs)}{graph}{gabow.cpp}
 \includefile{c++}{Union Find}{graph}{union_find.cpp}
 
 \newpage
 \includefile{c++}{Gomory Hu Tree}{graph}{gomory_hu.cpp}
-\includefile{c++}{Kuhn Munkres}{graph}{kuhn_munkres.cpp}
+\includefile{c++}{Kuhn Munkres (Maximum weighted bipartite matching)}{graph}{kuhn_munkres.cpp}
 \includefile{c++}{Link Cut Tree}{graph}{link_cut.cpp}
 \includefile{c++}{Heavy Light Decomposition}{graph}{heavy-light.cpp}
 \includefile{c++}{LCA / PD}{graph}{lcapd.cpp}
-
-%max flow modeling
+\includefile{c++}{Fast Dijkstra}{graph}{dijkstra.cpp}
 
 \newpage
 
@@ -378,10 +385,7 @@ A position with $n$ piles of size 1 is losing iff $n$ is odd.
 
 \newpage
 \includefile{c++}{Simplex}{math}{simplex.cpp}
-
-\subsubsection{Log properties}
-    $log(a^n) = n*log(a)$ \\
-    $log(n!) = \sum_{i=1}^{n} log(i)$
+\includefile{c++}{Matrix Exp}{math}{matrix_exp.cpp}
 
 \newpage
 
@@ -460,25 +464,29 @@ Shoot a ray from given point in an arbitrary direction. For each intersection of
 \includefile{c++}{Range Tree}{geometry}{range_tree.cpp}
 \includefile{c++}{KD Tree}{geometry}{kd_tree.cpp}
 \includefile{c++}{Enclosing Circle}{geometry}{enclosing_circle.cpp}
-\includefile{c++}{Geometry Basics}{meh}{geobasics.cpp}
-\includefile{c++}{3D Geometry Basics}{meh}{3dbasics.cpp}
-\includefile{c++}{Polygon Basics}{meh}{pbasics.cpp}
-\includefile{c++}{Plane and Operations}{meh}{pops.cpp}
+\includefile{c++}{Line Sweep Applications}{geometry}{line_sweep.cpp}
+
+\includefile{c++}{Closest Points}{geometry}{closest_points.cpp}
+\includefile{c++}{ISECT Primitives}{geometry}{isect_primitives.cpp}
+\includefile{c++}{Misc Primitives}{geometry}{misc_primitives.cpp}
+\includefile{c++}{Point}{geometry}{point.cpp}
+\includefile{c++}{Polygon Primitives}{geometry}{polygon_primitives.cpp}
+\includefile{c++}{Convex Hull}{geometry}{hull.cpp}
 
 \newpage
 
-\includefile{c++}{Intersections}{meh}{intersections.cpp}   
-\includefile{c++}{Angles}{meh}{angles.cpp}
-\includefile{c++}{Triangles}{meh}{triangles.cpp}
+% --Section-- Miscellaneous
+\subsection{Dynamic Programming}
 
-\subsubsection{Great Circle Distance}
-\lstinputlisting[language=c++]{meh/grtcrcldist.cpp}
-\includefile{c++}{Convex Hull (Line Sweep)}{meh}{hull_ls.cpp}
-\includefile{c++}{Graham Scan}{meh}{gscan.cpp}
-\includefile{c++}{Circles Intersections}{meh}{cintersect.cpp}
-\includefile{c++}{Closest Point}{meh}{clstpnt.cpp}
-\includefile{c++}{Closest Points and Distances 3D}{meh}{clstpnt3d.cpp}
-\includefile{c++}{Line Sweep Applications}{geometry}{line_sweep.cpp}
+\includefile{c++}{Longest Ascending Subsequence}{dp}{las.cpp}
+\includefile{c++}{Integer Partitioning}{dp}{int_part.cpp}
+\includefile{c++}{Edit Distance (with path recovery)}{dp}{edit_dist.cpp}
+\includefile{c++}{Maximum Submatrix Sum}{dp}{max_submatrix.cpp}
+\includefile{c++}{Edit distance between two strings}{dp}{string_dist.cpp}
+
+\newpage
+
+\includefile{c++}{Transpose String}{dp}{transpose_string.cpp}
 
 \newpage
 
@@ -521,10 +529,8 @@ A k-ary De Bruijn sequence B(k, n) of order n is a cyclic sequence of a given al
 \subsubsection{Josephus}
 \lstinputlisting[language=c++]{misc/josephus.cpp}
 
-\newpage
-
 \includefile{c++}{LIS O(n log n)}{misc}{lis.cpp}
-
 \includefile{c++}{Fast Input}{misc}{fast_input.cpp}
+\includefile{c++}{Fraction}{misc}{fraction.cpp}
 
 \end{document}

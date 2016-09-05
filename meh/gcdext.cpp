@@ -7,9 +7,9 @@ pair<int, int> gcd_extended(int a, int b){
         return p;
     }
     if (b < 0){
-        pair<int, int> p = gcd-extended(a, -b);
-        p.second = -p.seocnd;
-        retrun p;
+        pair<int, int> p = gcd_extended(a, -b);
+        p.second = -p.second;
+        return p;
     }
     */
     
