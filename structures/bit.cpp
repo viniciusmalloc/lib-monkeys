@@ -1,8 +1,8 @@
-#define MAX 10000 //bit size
+#define MAX 10000 //bit size sample
 
 int ft[MAX];
 
-//range to count
+//range to count (must be valid)
 int rsq(int a, int b){
     if ( a == 0 ){
         int sum = 0;
@@ -15,7 +15,7 @@ int rsq(int a, int b){
 }
 
 //add to the k-th element value
-void adjust(int k, int value){
-    for ( ; k <= t.size(); k |= k + 1 )
+void adjust(int n, int k, int value){
+    for ( ; k <= n; k |= k + 1 )
         ft[k] += value;
 }

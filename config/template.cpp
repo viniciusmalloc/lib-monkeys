@@ -1,15 +1,15 @@
 #include <bits/stdc++.h>
 
-#define FILL(X, V) memset((X), (V), sizeof(X))
-#define TI(X) __typeof((X).begin())
-#define ALL(V) V.begin(), V.end()
-#define SIZE(V) int((V).size())
+// #define FILL(X, V) memset((X), (V), sizeof(X))
+// #define TI(X) __typeof((X).begin())
+// #define ALL(V) V.begin(), V.end()
+// #define SIZE(V) int((V).size())
 
-#define FOR(i, a, b) for(int i = a; i <= b; ++i)
-#define RFOR(i, b, a) for(int i = b; i >= a; --i)
-#define REP(i, N) for(int i = 0; i < N; ++i)
-#define RREP(i, N) for(int i = N-1; i >= 0; --i)
-#define FORIT(i, a) for(TI(a) i = (a).begin(); i != (a).end(); ++i)
+// #define FOR(i, a, b) for(int i = a; i <= b; ++i)
+// #define RFOR(i, b, a) for(int i = b; i >= a; --i)
+// #define REP(i, N) for(int i = 0; i < N; ++i)
+// #define RREP(i, N) for(int i = N-1; i >= 0; --i)
+// #define FORIT(i, a) for(TI(a) i = (a).begin(); i != (a).end(); ++i)
 
 #define pb push_back
 #define mp make_pair

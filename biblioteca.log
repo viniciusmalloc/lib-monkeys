@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  5 SEP 2016 11:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 SEP 2016 22:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -604,110 +604,80 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 \tf@toc=\write3
 \openout3 = `biblioteca.toc'.
 
-
-Overfull \vbox (7.07675pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (7.07675pt too high) has occurred while \output is active []
-
-
-[2]
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 69.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 (./config/template.cpp
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 1.
-) [3]
+LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 3.
+ [2])
 Underfull \hbox (badness 10000) in paragraph at lines 84--87
 
  []
 
-[4] [5] (./meh/gcdext.cpp
-LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 1.
-) [6] (./math/sieve.cpp) (./math/miller_rabin.cpp)
-[7] (./math/pollard.cpp) [8] (./meh/sigma.cpp) (./meh/phi.cpp) [9] [10]
-[11] (./string/hash.cpp) (./string/prefixfunc.cpp) (./string/zfunc.cpp)
-(./string/manacher.cpp)
-Overfull \vbox (17.21844pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (10.36842pt too high) has occurred while \output is active []
-
-
-[12] (./string/aho.cpp)
-Overfull \vbox (5.71844pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (8.36842pt too high) has occurred while \output is active []
-
-
-[13] (./string/suffix_array.cpp) [14] (./string/karkkainen.cpp)
-Overfull \vbox (12.92677pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (15.57675pt too high) has occurred while \output is active []
-
-
-[15] (./string/suffixaut.cpp)
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 239.
+[3] [4] (./meh/gcdext.cpp) [5] (./math/sieve.cpp) (./math/miller_rabin.cpp)
+[6] (./math/pollard.cpp) [7] (./meh/sigma.cpp) (./meh/phi.cpp) [8] [9]
+(./string/hash.cpp) (./string/prefixfunc.cpp) (./string/manacher.cpp) [10]
+(./string/suffix_array.cpp)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 238.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 239.
- [16] [17]
-(./graph/bip_match.cpp) [18] <graph/euler.png, id=77, 887.315pt x 94.3525pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 238.
+ [11] [12]
+(./graph/bip_match.cpp) [13] <graph/euler.png, id=61, 887.315pt x 94.3525pt>
 File: graph/euler.png Graphic file (type png)
 
 <use graph/euler.png>
-Package pdftex.def Info: graph/euler.png used on input line 281.
+Package pdftex.def Info: graph/euler.png used on input line 280.
 (pdftex.def)             Requested size: 621.11627pt x 66.04628pt.
- [19 <./graph/euler.png>] (./graph/stable_marriage.cpp
+ [14 <./graph/euler.png>] (./graph/stable_marriage.cpp
 Overfull \hbox (14.12915pt too wide) in paragraph at lines 28--29
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [20] (./graph/stoer_wagner.cpp) [21] [22] (./graph/tarjan_articulation.cpp)
-(./graph/tarjan_bridges.cpp) [23] (./graph/tarjan_scc.cpp)
-(./graph/floyd_warshall.cpp) [24] (./graph/dinic.cpp) [25]
-(./graph/edmonds_karp.cpp) [26] (./graph/gabow.cpp [27])
-(./graph/union_find.cpp) [28] (./graph/kuhn_munkres.cpp) (./graph/link_cut.cpp
-[29]) (./graph/heavy-light.cpp)
+) [15] (./graph/stoer_wagner.cpp) [16] (./graph/tarjan_articulation.cpp)
+(./graph/tarjan_bridges.cpp) [17] (./graph/tarjan_scc.cpp)
+(./graph/floyd_warshall.cpp) [18] (./graph/dinic.cpp) [19]
+(./graph/edmonds_karp.cpp) [20] (./graph/gabow.cpp [21])
+(./graph/union_find.cpp) [22] (./graph/kuhn_munkres.cpp) (./graph/link_cut.cpp
+[23]) (./graph/heavy-light.cpp)
 Overfull \vbox (15.21844pt too high) has occurred while \output is active []
 
 
 Overfull \vbox (17.86842pt too high) has occurred while \output is active []
 
 
-[30] (./graph/lcapd.cpp) (./graph/dijkstra.cpp)
+[24] (./graph/lcapd.cpp) (./graph/dijkstra.cpp)
 Overfull \vbox (7.01012pt too high) has occurred while \output is active []
 
 
 Overfull \vbox (9.6601pt too high) has occurred while \output is active []
 
 
-[31] (./structures/treap.cpp [32]) (./structures/avl.cpp) [33]
-(./structures/bit.cpp) (./structures/heap.cpp) [34] [35] (./meh/polynomials.cpp
-) [36] (./meh/cyclefinding.cpp) (./math/romberg.cpp) [37] (./math/fft.cpp)
-[38] (./math/simplex.cpp
+[25] (./structures/avl.cpp) [26] (./structures/bit.cpp) (./structures/heap.cpp)
+[27] (./meh/polynomials.cpp) [28] (./meh/cyclefinding.cpp) (./math/romberg.cpp)
+[29] (./math/simplex.cpp
 Overfull \hbox (18.92937pt too wide) in paragraph at lines 48--49
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (./math/matrix_exp.cpp) [39]
-<geometry/candc.png, id=145, 925.4575pt x 224.84pt>
+) (./math/matrix_exp.cpp) [30]
+<geometry/candc.png, id=115, 925.4575pt x 224.84pt>
 File: geometry/candc.png Graphic file (type png)
  <use geometry/candc.png>
-Package pdftex.def Info: geometry/candc.png used on input line 429.
+Package pdftex.def Info: geometry/candc.png used on input line 428.
 (pdftex.def)             Requested size: 647.81584pt x 157.38692pt.
 
-[40] [41 <./geometry/candc.png>] (./geometry/range_tree.cpp [42])
+[31] [32 <./geometry/candc.png>] (./geometry/range_tree.cpp [33])
 (./geometry/kd_tree.cpp)
 Overfull \vbox (15.21844pt too high) has occurred while \output is active []
 
@@ -715,27 +685,22 @@ Overfull \vbox (15.21844pt too high) has occurred while \output is active []
 Overfull \vbox (17.86842pt too high) has occurred while \output is active []
 
 
-[43] (./geometry/enclosing_circle.cpp) (./geometry/line_sweep.cpp [44])
-(./geometry/closest_points.cpp) [45] (./geometry/isect_primitives.cpp)
-(./geometry/misc_primitives.cpp) (./geometry/point.cpp [46])
-(./geometry/polygon_primitives.cpp) (./geometry/hull.cpp) [47] (./dp/las.cpp
-[48]) (./dp/int_part.cpp) [49] (./dp/edit_dist.cpp [50])
-(./dp/max_submatrix.cpp [51]) (./dp/string_dist.cpp [52] [53]) [54]
-(./dp/transpose_string.cpp [55]) [56] (./misc/subsets.cpp)
-Underfull \hbox (badness 10000) in paragraph at lines 510--512
-
- []
-
-[57] (./misc/debruijn.cpp) (./misc/josephus.cpp) (./misc/lis.cpp [58])
-(./misc/fast_input.cpp) (./misc/fraction.cpp) [59] (./biblioteca.aux) ) 
+[34] (./geometry/enclosing_circle.cpp) (./geometry/line_sweep.cpp [35])
+(./geometry/closest_points.cpp) [36] (./geometry/isect_primitives.cpp)
+(./geometry/misc_primitives.cpp) (./geometry/point.cpp [37])
+(./geometry/polygon_primitives.cpp) (./geometry/hull.cpp) [38] (./dp/las.cpp
+[39]) (./dp/int_part.cpp) [40] (./dp/edit_dist.cpp [41])
+(./dp/max_submatrix.cpp [42]) (./dp/string_dist.cpp [43] [44]) [45]
+(./dp/transpose_string.cpp [46]) [47] (./misc/subsets.cpp) (./misc/josephus.cpp
+) (./misc/lis.cpp) [48] (./misc/fraction.cpp) [49] (./biblioteca.aux) ) 
 Here is how much of TeX's memory you used:
- 6751 strings out of 493089
- 86042 string characters out of 6134842
- 357573 words of memory out of 5000000
- 9934 multiletter control sequences out of 15000+600000
- 12697 words of font info for 47 fonts, out of 8000000 for 9000
+ 6559 strings out of 493089
+ 84040 string characters out of 6134842
+ 295589 words of memory out of 5000000
+ 9767 multiletter control sequences out of 15000+600000
+ 12350 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,12n,58p,602b,1817s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,12n,58p,604b,1908s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/lo
 cal/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/201
 5/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015
@@ -751,15 +716,14 @@ onts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
-1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/
-type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/ur
-w/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courie
-r/ucrro8a.pfb>
-Output written on biblioteca.pdf (59 pages, 368164 bytes).
+e1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts
+/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/u
+rw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/couri
+er/ucrro8a.pfb>
+Output written on biblioteca.pdf (49 pages, 338790 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 187 compressed objects within 2 object streams
+ 235 PDF objects out of 1000 (max. 8388607)
+ 163 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

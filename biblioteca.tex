@@ -14,7 +14,7 @@
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{Monkeys [UFG]}
+\lhead{PowerPuff Girls [UFG]}
 \rhead{\thepage}
 \cfoot{}
 
@@ -68,7 +68,7 @@
 
 \includesfile{c++}{Template}{config}{template.cpp}
 
-\newpage
+% \newpage
 
 % --Section-- Combinatorics
 \subsection{Combinatorics}
@@ -106,9 +106,9 @@ $B_{n+1} = \sum_{k=0}^{n}\binom{n}{k}B_{k} = \sum_{k=1}^{n} S_{n,k}$. Bell trian
 $E(n, k)$ is the number of permutations with exactly $k$ descents $(i : \pi_{i} < \pi_{i+1})$ / ascents $(\pi_{i} > \pi_{i+1})$ / excedances $(\pi_{i} > i)$ / $k + 1$ weak excedances $(\pi_{i} \geq i)$.\\
 Formula: $E(n,k) = (k+1)E(n-1,k) + (n-k)E(n-1,k-1)$.
 
-\subsubsection{Burnside's lemma}
-The number of orbits under $G$'s action on set $X$ : $|X/G| = \frac{1}{|G|} \sum_{g \in G} |X_g|$, where $X_g = \{x \in X : g(x) = x\}$. (``Average number of fixed points.'')
-Let $w(x)$ be weight of $x$'s orbit. Sum of all orbits' weights: $\sum_{o \in X/G}w(o) = \frac{1}{|G|} \sum_{g \in G} \sum_{x \in X_g} w(x)$.
+% \subsubsection{Burnside's lemma}
+% The number of orbits under $G$'s action on set $X$ : $|X/G| = \frac{1}{|G|} \sum_{g \in G} |X_g|$, where $X_g = \{x \in X : g(x) = x\}$. (``Average number of fixed points.'')
+% Let $w(x)$ be weight of $x$'s orbit. Sum of all orbits' weights: $\sum_{o \in X/G}w(o) = \frac{1}{|G|} \sum_{g \in G} \sum_{x \in X_g} w(x)$.
 
 % --Section-- Number Theory
 \subsection{Number Theory}
@@ -158,8 +158,7 @@ $\tau(p_1^{a_1}...p_k^{a_k}) = \prod_{j=1}^{k}(a_j + 1).$
 
 $\sigma(p_1^{a_1}...p_k^{a_k}) = \prod_{j=1}^{k}\frac{p_{j}^{a_j+1}-1}{p_j-1}.$
 
-\includefile{c++}{Euler's phi function}{meh}{phi.cpp}
-
+\includefile{c++}{Euler's phi function (Números co-primos (Código no livro))}{meh}{phi.cpp}
 $\phi(n) = |\{m \in \mathbb{N}, m \leq n, gcd(m,n) = 1\}|$.
 
 $\phi(mn) = \frac{\phi(m)\phi(n)gcd(m,n)}{\phi(gcd(m,n))}$.
@@ -201,15 +200,15 @@ If $p$ is prime and $a$ is not divisible by $p$, then congruence $x^n \equiv a (
 Find $x$ from $a^x \equiv b (mod\ m)$. Can be solved in $O(\sqrt{m})$ time and space with a meet-in-the-middle trick. Let $n = \lceil \sqrt{m} \rceil$, and $x = ny - z$. Equation becomes $a^{ny} \equiv ba^z (mod\ m)$.
 Precompute all values that the RHS can take for $z$ = 0,1,...,n-1, and brute force y on the LHS, each time checking whether there’s a corresponding value for RHS.
 
-\subsubsection{Pythagorean triples}
-Integer solutions of $x^2 + y^2 = z^2$. All relatively prime triples are given by: $x = 2mn, y = m^2 - n^2, z = m^2 + n^2$ where $m > n$, $gcd(m,n) = 1$ and $m \not\equiv n (mod\ 2)$. All other triples
-are multiples of these. Equation $x^2 + y^2 = 2z^2$ is equivalent to $(\frac{x+y}{2})^2 + (\frac{x-y}{2})^2 = z^2$.
+% \subsubsection{Pythagorean triples}
+% Integer solutions of $x^2 + y^2 = z^2$. All relatively prime triples are given by: $x = 2mn, y = m^2 - n^2, z = m^2 + n^2$ where $m > n$, $gcd(m,n) = 1$ and $m \not\equiv n (mod\ 2)$. All other triples
+% are multiples of these. Equation $x^2 + y^2 = 2z^2$ is equivalent to $(\frac{x+y}{2})^2 + (\frac{x-y}{2})^2 = z^2$.
 
-\subsubsection{Postage stamps/McNuggets problem}
-Let $a, b$ be relatively-prime integers. There are exactly $\frac{1}{2}(a-1)(b-1)$ numbers \emph{not} of form $ax + by (x,y \geq 0)$, and the largest is $(a-1)(b-1)-1 = ab-a-b$.
+% \subsubsection{Postage stamps/McNuggets problem}
+% Let $a, b$ be relatively-prime integers. There are exactly $\frac{1}{2}(a-1)(b-1)$ numbers \emph{not} of form $ax + by (x,y \geq 0)$, and the largest is $(a-1)(b-1)-1 = ab-a-b$.
 
-\subsubsection{Fermat's two-squares theorem}
-Odd prime $p$ can be represented as a sum of two squares iff $p \equiv 1 (mod\ 4)$. A product of two sums of two squares is a sum of two squares. Thus, $n$ is a sum of two squares iff every prime of form $p = 4k + 3$ occurs an even number of times in $n$'s factorization.
+% \subsubsection{Fermat's two-squares theorem}
+% Odd prime $p$ can be represented as a sum of two squares iff $p \equiv 1 (mod\ 4)$. A product of two sums of two squares is a sum of two squares. Thus, $n$ is a sum of two squares iff every prime of form $p = 4k + 3$ occurs an even number of times in $n$'s factorization.
 
 \newpage
 
@@ -221,19 +220,19 @@ Odd prime $p$ can be represented as a sum of two squares iff $p \equiv 1 (mod\ 4
   \subsubsection{Prefix Function}
   \lstinputlisting[language=c++]{string/prefixfunc.cpp}
   
-  \subsubsection{Z Function}
-  \lstinputlisting[language=c++]{string/zfunc.cpp}
+  % \subsubsection{Z Function}
+  % \lstinputlisting[language=c++]{string/zfunc.cpp}
 \end{multicols}
 
-\includefile{c++}{Manacher}{string}{manacher.cpp}
-\includefile{c++}{Aho-Corasick}{string}{aho.cpp}
+\includefile{c++}{Manacher (Maior substring palindromo)}{string}{manacher.cpp}
+% \includefile{c++}{Aho-Corasick}{string}{aho.cpp}
 
 \newpage
 \includefile{c++}{Suffix Array O(n log n)}{string}{suffix_array.cpp}
 
-\newpage
-\includefile{c++}{Suffix Array O(n)}{string}{karkkainen.cpp}
-\includefile{c++}{Suffix Automata}{string}{suffixaut.cpp}
+% \newpage
+% \includefile{c++}{Suffix Array O(n)}{string}{karkkainen.cpp}
+% \includefile{c++}{Suffix Automata}{string}{suffixaut.cpp}
 
 \begin{itemize}
   \item First occurrence of string P $= firstpos(v) - |P| + 1$;
@@ -244,8 +243,8 @@ Odd prime $p$ can be represented as a sum of two squares iff $p \equiv 1 (mod\ 4
 \subsubsection{Burrows-Wheeler inverse transform}
 Let B[1..n] be the input (last column of sorted matrix of string's rotations). Get the first column, A[1...n], by sorting B. For each $k$-th occurrence of a character $c$ at index $i$ in A, let next[i] be the index of corresponding $k-th$ occurrence of $c$ in $B$. The $r$-th row of the matrix is A[r], A[next[r]], A[next[next[r]]], ... 
 
-\subsubsection{Huffman's algorithm}
-Start with a forest, consisting of isolated vertices. Repeatedly merge two trees with the lowest weights.
+% \subsubsection{Huffman's algorithm}
+% Start with a forest, consisting of isolated vertices. Repeatedly merge two trees with the lowest weights.
 
 %suffix array usage
 
@@ -302,14 +301,14 @@ Store cut-of-the-phase (the cut between the last added vertex and rest of the gr
 A sequence of integers $\{d_1,d_2,...,d_n\}$, with $n-1 \geq d_1 \geq d_2 \geq ... \geq d_n \geq 0$ is a degree sequence of some undirected simple graph iff $\sum d_i$ is even and $d_1+ ... + dk \leq k(k-1)+ \sum_{i=k+1}^{n}min(k, d_i)$
 for all $k = 1, 2, . . . , n - 1$.
 
-\subsubsection{Dilworth's theorem}
-In any finite partially ordered set, the maximum number of elements in any antichain equals the minimum number of chains in any partition of the set into chains.
+% \subsubsection{Dilworth's theorem}
+% In any finite partially ordered set, the maximum number of elements in any antichain equals the minimum number of chains in any partition of the set into chains.
 
-Dilworth's theorem characterizes the width of any finite partially ordered set in terms of a partition of the order into a minimum number of chains.\\
-An antichain in a partially ordered set is a set of elements no two of which are comparable to each other, and a chain is a set of elements every two of which are comparable. Dilworth's theorem states that there exists an antichain $A$,
-and a partition of the order into a family $P$ of chains, such that the number of chains in the partition equals the cardinality of $A$. When this occurs, $A$ must be the largest antichain in the order, for any antichain can have at most one
-element from each member of $P$. Similarly, $P$ must be the smallest family of chains into which the order can be partitioned, for any partition into chains must have at least one chain per element of $A$. The width of the partial order is
-defined as the common size of $A$ and $P$. 
+% Dilworth's theorem characterizes the width of any finite partially ordered set in terms of a partition of the order into a minimum number of chains.\\
+% An antichain in a partially ordered set is a set of elements no two of which are comparable to each other, and a chain is a set of elements every two of which are comparable. Dilworth's theorem states that there exists an antichain $A$,
+% and a partition of the order into a family $P$ of chains, such that the number of chains in the partition equals the cardinality of $A$. When this occurs, $A$ must be the largest antichain in the order, for any antichain can have at most one
+% element from each member of $P$. Similarly, $P$ must be the smallest family of chains into which the order can be partitioned, for any partition into chains must have at least one chain per element of $A$. The width of the partial order is
+% defined as the common size of $A$ and $P$. 
 
 \newpage
 \includefile{c++}{Tarjan algorithm for articulation points (Vértice)}{graph}{tarjan_articulation.cpp}
@@ -329,22 +328,22 @@ defined as the common size of $A$ and $P$.
 \includefile{c++}{Edmonds-Karp (Fluxo máximo)}{graph}{edmonds_karp.cpp}
 
 \newpage
-\includefile{c++}{Gabow (Maximum weighted matching in general graghs)}{graph}{gabow.cpp}
+\includefile{c++}{Gabow (Emparelhamento máximo em grafos ponderados)}{graph}{gabow.cpp}
 \includefile{c++}{Union Find}{graph}{union_find.cpp}
 
 \newpage
 % \includefile{c++}{Gomory Hu Tree}{graph}{gomory_hu.cpp}
-\includefile{c++}{Kuhn-Munkres (Maximum weighted bipartite matching)}{graph}{kuhn_munkres.cpp}
+\includefile{c++}{Kuhn-Munkres (Emparelhamento máximo em grafos ponderados bipartidos)}{graph}{kuhn_munkres.cpp}
 \includefile{c++}{Link Cut Tree}{graph}{link_cut.cpp}
-\includefile{c++}{Heavy Light Decomposition}{graph}{heavy-light.cpp}
+\includefile{c++}{Heavy Light Decomposition (Menor ancestral comum)}{graph}{heavy-light.cpp}
 \includefile{c++}{LCA / PD (Menor ancestral comum)}{graph}{lcapd.cpp}
-\includefile{c++}{Fast Dijkstra}{graph}{dijkstra.cpp}
+\includefile{c++}{Dijkstra}{graph}{dijkstra.cpp}
 
 \newpage
 
 % --Section-- Data Structures
 \subsection{Data structures}
-\includefile{c++}{Treap}{structures}{treap.cpp}
+% \includefile{c++}{Treap}{structures}{treap.cpp}
 \includefile{c++}{AVL Tree}{structures}{avl.cpp}
 
 \newpage
@@ -352,24 +351,24 @@ defined as the common size of $A$ and $P$.
 \includefile{c++}{Heap}{structures}{heap.cpp}
 % \includefile{c++}{Big Integer}{structures}{bignum.cpp}
 
-\newpage
+% \newpage
 
 % --Section-- Game Theory
-\subsection{Games}
-\subsubsection{Grundy numbers}
-For a two-player, normal-play (last to move wins) game on a graph ($V,E$): $G(x)=mex(\{G(y) : (x,y) \in E\})$, where $mex(S)=min\{n \geq 0 : n \not\in S\}$. $x$ is losing iff $G(x)=0$.
+% \subsection{Game Theory}
+% \subsubsection{Grundy numbers}
+% For a two-player, normal-play (last to move wins) game on a graph ($V,E$): $G(x)=mex(\{G(y) : (x,y) \in E\})$, where $mex(S)=min\{n \geq 0 : n \not\in S\}$. $x$ is losing iff $G(x)=0$.
 
-\subsubsection{Sums of games}
-\begin{itemize}
-  \item Player chooses a game and makes a move in it. Grundy number of a position is xor of grundy numbers of positions in summed games.
-  \item Player chooses a non-empty subset of games (possibly, all) and makes moves in all of them. A position is losing iff each game is in a losing position.
-  \item Player chooses a proper subset of games (not empty and not all), and makes moves in all chosen ones. A position is losing iff grundy numbers of all games are equal.
-  \item Player must move in all games, and loses if can’t move in some game. A position is losing if any of the games is in a losing position.
-\end{itemize}
+% \subsubsection{Sums of games}
+% \begin{itemize}
+%   \item Player chooses a game and makes a move in it. Grundy number of a position is xor of grundy numbers of positions in summed games.
+%   \item Player chooses a non-empty subset of games (possibly, all) and makes moves in all of them. A position is losing iff each game is in a losing position.
+%   \item Player chooses a proper subset of games (not empty and not all), and makes moves in all chosen ones. A position is losing iff grundy numbers of all games are equal.
+%   \item Player must move in all games, and loses if can’t move in some game. A position is losing if any of the games is in a losing position.
+% \end{itemize}
 
-\subsubsection{Misère Nim}
-A position with pile sizes $a_1,a_2,...,a_n \geq 1$, not all equal to 1, is losing iff $a_1 \bigoplus a_2 \bigoplus ... \bigoplus a_n = 0$ (like in normal nim.)
-A position with $n$ piles of size 1 is losing iff $n$ is odd.
+% \subsubsection{Misère Nim}
+% A position with pile sizes $a_1,a_2,...,a_n \geq 1$, not all equal to 1, is losing iff $a_1 \bigoplus a_2 \bigoplus ... \bigoplus a_n = 0$ (like in normal nim.)
+% A position with $n$ piles of size 1 is losing iff $n$ is odd.
 
 \newpage
 
@@ -380,12 +379,12 @@ A position with $n$ piles of size 1 is losing iff $n$ is odd.
 \includefile{c++}{Cycle Finding}{meh}{cyclefinding.cpp}
 \includefile{c++}{Romberg's Method (Integral finita)}{math}{romberg.cpp}
 
-\newpage
-\includefile{c++}{FFT (Fourier)}{math}{fft.cpp}
+% \newpage
+% \includefile{c++}{FFT (Fourier)}{math}{fft.cpp}
 
 \newpage
 \includefile{c++}{Simplex}{math}{simplex.cpp}
-\includefile{c++}{Matrix Exp}{math}{matrix_exp.cpp}
+\includefile{c++}{Matrix Exponentiation}{math}{matrix_exp.cpp}
 
 \newpage
 
@@ -496,41 +495,42 @@ Shoot a ray from given point in an arbitrary direction. For each intersection of
 \subsubsection{Subsets of a subset in $O(3^n)$}
 \lstinputlisting[language=c++]{misc/subsets.cpp}
 
-\subsubsection{Fractional Cascading}
-Given $k$ sorted sequences $S$, find first element $\geq q$ in all $k$ sequences in $O(log n + k)$.\\
-We will generate $k$ modified sequences $M$. Every element of a sequence $M_{i}$ will have two indexes associated with it: it's supposed index in $S_{i}$ rounding to the largest option,
-and it's supposed index in $M_{i+1}$.\\
-Starting in $M_{k} (M_{k} = S_{k}$, all the second indexes are zero, and the first indexes are the actual indexes in $S_{i}$), for every $M_{i}$ do:
+% \subsubsection{Fractional Cascading}
+% Given $k$ sorted sequences $S$, find first element $\geq q$ in all $k$ sequences in $O(log n + k)$.\\
+% We will generate $k$ modified sequences $M$. Every element of a sequence $M_{i}$ will have two indexes associated with it: it's supposed index in $S_{i}$ rounding to the largest option,
+% and it's supposed index in $M_{i+1}$.\\
+% Starting in $M_{k} (M_{k} = S_{k}$, all the second indexes are zero, and the first indexes are the actual indexes in $S_{i}$), for every $M_{i}$ do:
 
-    Insert in $M_{i-1}$ all the elements in odd positions of $M_{i}$
+%     Insert in $M_{i-1}$ all the elements in odd positions of $M_{i}$
     
-    In every insertion maintain the index in $M_{i}$ of the last inserted element, and the index of the element currently being inserted.
-    With that information, find out the second indexes of the elements between the last inserted and the currently being inserted.
+%     In every insertion maintain the index in $M_{i}$ of the last inserted element, and the index of the element currently being inserted.
+%     With that information, find out the second indexes of the elements between the last inserted and the currently being inserted.
     
-    The first indexes of all the original elements are initialized with their actual indexes, and the first indexes of the inserted elements are initialized with min(index of first original element before the inserted one +1, sequence size - 1)
-    or if the element is being inserted in position 0, the index is 0\\
+%     The first indexes of all the original elements are initialized with their actual indexes, and the first indexes of the inserted elements are initialized with min(index of first original element before the inserted one +1, sequence size - 1)
+%     or if the element is being inserted in position 0, the index is 0\\
     
-With that information, do a binary search in the first sequence ($M_{0}$), with that you'll find the answer to the query in $S_{0}$ being $S_{0{element.first}}$, and then you go to the position element.second of $M_{1}$, and check if element in position element.second-1 is $\geq q$, if it is true, the element you're looking for is element.second-1, otherwise it's element.second. The answer to the current sequence will be in the index that is in the element in the found index (element.second-1 or element.second) .first. Repeat the process until you find the last answer in $M_{k}$
+% With that information, do a binary search in the first sequence ($M_{0}$), with that you'll find the answer to the query in $S_{0}$ being $S_{0{element.first}}$, and then you go to the position element.second of $M_{1}$, and check if element in position element.second-1 is $\geq q$, if it is true, the element you're looking for is element.second-1, otherwise it's element.second. The answer to the current sequence will be in the index that is in the element in the found index (element.second-1 or element.second) .first. Repeat the process until you find the last answer in $M_{k}$
 
 \subsubsection{Warnsdorff’s heuristic for knight’s tour}
 At each step choose a square which has the least number of valid moves that the knight can make from there.
 
-\subsubsection{Optimal BST - Knuth Optimization}
-$root[i, j - 1] \leq root[i, j] \leq root[i + 1, j]$.
+% \subsubsection{Optimal BST - Knuth Optimization}
+% $root[i, j - 1] \leq root[i, j] \leq root[i + 1, j]$.
 
-\subsubsection{Flow-shop scheduling (Johnson’s problem)}
-Schedule $N$ jobs on 2 machines to minimize completition time. $i$-th job takes $a_i$ and $b_i$ time to execute on 1st and 2nd machine, respectively.
-Each job must be first executed on the first machine, then on second. Both machines execute all jobs in the same order. Solution: sort jobs by key $a_i < b_i ? a_i : (\infty - b_i)$,
-i.e. first execute all jobs with $a_i < b_i$ in order of increasing $a_i$, then all other jobs in order of decreasing $b_i$.
+% \subsubsection{Flow-shop scheduling (Johnson’s problem)}
+% Schedule $N$ jobs on 2 machines to minimize completition time. $i$-th job takes $a_i$ and $b_i$ time to execute on 1st and 2nd machine, respectively.
+% Each job must be first executed on the first machine, then on second. Both machines execute all jobs in the same order. Solution: sort jobs by key $a_i < b_i ? a_i : (\infty - b_i)$,
+% i.e. first execute all jobs with $a_i < b_i$ in order of increasing $a_i$, then all other jobs in order of decreasing $b_i$.
 
-\includefile{c++}{Generate de Bruijin sequence}{misc}{debruijn.cpp}
-A k-ary De Bruijn sequence B(k, n) of order n is a cyclic sequence of a given alphabet A with size k for which every possible subsequence of length n in A appears as a sequence of consecutive characters exactly once.
+% \includefile{c++}{Generate de Bruijin sequence}{misc}{debruijn.cpp}
+% A k-ary De Bruijn sequence B(k, n) of order n is a cyclic sequence of a given alphabet A with size k for which every possible subsequence of length n in A appears as a sequence of consecutive characters exactly once.
 
 \subsubsection{Josephus}
 \lstinputlisting[language=c++]{misc/josephus.cpp}
 
 \includefile{c++}{LIS O(n log n) (Maior Seq. Crescente)}{misc}{lis.cpp}
-\includefile{c++}{Fast Input}{misc}{fast_input.cpp}
+% \includefile{c++}{Fast Input (Leitura rápida)}{misc}{fast_input.cpp}
+\newpage
 \includefile{c++}{Fraction}{misc}{fraction.cpp}
 
 \end{document}
