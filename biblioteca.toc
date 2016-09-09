@@ -1,38 +1,38 @@
-\contentsline {subsection}{Template}{2}
+\contentsline {subsection}{Template}{3}
 \contentsline {subsection}{Combinatorics}{3}
 \contentsline {subsubsection}{Binomial Coefficients}{3}
 \contentsline {subsubsection}{Pascal Triangle}{3}
-\contentsline {subsubsection}{Log properties}{3}
+\contentsline {subsubsection}{Log properties}{4}
 \contentsline {subsubsection}{Catalan numbers}{4}
 \contentsline {subsubsection}{Derangements}{4}
 \contentsline {subsubsection}{Bell numbers}{4}
 \contentsline {subsubsection}{Eulerian numbers}{4}
-\contentsline {subsection}{Number Theory}{4}
-\contentsline {subsubsection}{Linear diophantine equation}{4}
-\contentsline {subsubsection}{Chinese Remainder Theorem}{4}
-\contentsline {subsubsection}{Extended GCD}{5}
-\contentsline {subsubsection}{Prime-counting function}{5}
-\contentsline {subsubsection}{Fast Sieve (N\IeC {\'u}meros primos)}{6}
-\contentsline {subsubsection}{Miller-Rabin's primality test}{6}
-\contentsline {subsubsection}{Pollard-$\rho $ (Fatoriza\IeC {\c c}\IeC {\~a}o Int.)}{7}
-\contentsline {subsubsection}{Fermat primes}{7}
-\contentsline {subsubsection}{Perfect numbers}{7}
-\contentsline {subsubsection}{Carmichael numbers}{7}
-\contentsline {subsubsection}{Number/sum of divisors}{8}
-\contentsline {subsubsection}{Euler's phi function (N\IeC {\'u}meros co-primos (C\IeC {\'o}digo no livro))}{8}
-\contentsline {subsubsection}{Euler's Theorem}{8}
-\contentsline {subsubsection}{Wilson's Theorem}{9}
-\contentsline {subsubsection}{Mobius function}{9}
-\contentsline {subsubsection}{Legendre symbol}{9}
-\contentsline {subsubsection}{Jacobi symbol}{9}
-\contentsline {subsubsection}{Primitive roots}{9}
-\contentsline {subsubsection}{Discrete log}{9}
-\contentsline {subsection}{String Algorithms}{10}
-\contentsline {subsubsection}{String Hash}{10}
-\contentsline {subsubsection}{Prefix Function}{10}
-\contentsline {subsubsection}{Manacher (Maior substring palindromo)}{10}
-\contentsline {subsubsection}{Suffix Array O(n log n)}{11}
-\contentsline {subsubsection}{Burrows-Wheeler inverse transform}{12}
+\contentsline {subsection}{Number Theory}{5}
+\contentsline {subsubsection}{Multiplicative Inverse}{5}
+\contentsline {subsubsection}{Linear diophantine equation}{5}
+\contentsline {subsubsection}{Chinese Remainder Theorem}{5}
+\contentsline {subsubsection}{Extended GCD}{6}
+\contentsline {subsubsection}{Prime-counting function}{6}
+\contentsline {subsubsection}{Fast Sieve (N\IeC {\'u}meros primos)}{7}
+\contentsline {subsubsection}{Miller-Rabin's primality test}{7}
+\contentsline {subsubsection}{Pollard-$\rho $ (Fatoriza\IeC {\c c}\IeC {\~a}o Int.)}{8}
+\contentsline {subsubsection}{Fermat primes}{8}
+\contentsline {subsubsection}{Perfect numbers}{8}
+\contentsline {subsubsection}{Carmichael numbers}{8}
+\contentsline {subsubsection}{Number/sum of divisors}{9}
+\contentsline {subsubsection}{Euler's phi function (N\IeC {\'u}meros co-primos (C\IeC {\'o}digo no livro))}{9}
+\contentsline {subsubsection}{Euler's Theorem}{9}
+\contentsline {subsubsection}{Wilson's Theorem}{10}
+\contentsline {subsubsection}{Mobius function}{10}
+\contentsline {subsubsection}{Legendre symbol}{10}
+\contentsline {subsubsection}{Jacobi symbol}{10}
+\contentsline {subsubsection}{Primitive roots}{10}
+\contentsline {subsubsection}{Discrete log}{10}
+\contentsline {subsection}{String Algorithms}{11}
+\contentsline {subsubsection}{String Hash}{11}
+\contentsline {subsubsection}{Prefix Function}{11}
+\contentsline {subsubsection}{Manacher (Maior substring pal\IeC {\'\i }ndromo)}{11}
+\contentsline {subsubsection}{Suffix Array O(n log n)}{12}
 \contentsline {subsection}{Graphs}{13}
 \contentsline {subsubsection}{Hopcroft-Karp (Matching Bipartido)}{13}
 \contentsline {subsubsection}{Euler\IeC {\textquoteright }s theorem}{14}
@@ -91,15 +91,16 @@
 \contentsline {subsubsection}{Polygon Primitives}{38}
 \contentsline {subsubsection}{Convex Hull}{38}
 \contentsline {subsection}{Dynamic Programming}{39}
+\contentsline {subsubsection}{Knapsack problem (Mochila)}{39}
 \contentsline {subsubsection}{Longest Ascending Subsequence}{39}
 \contentsline {subsubsection}{Integer Partitioning}{40}
 \contentsline {subsubsection}{Edit Distance (with path recovery)}{41}
 \contentsline {subsubsection}{Maximum Submatrix Sum}{42}
 \contentsline {subsubsection}{Edit distance between two strings}{43}
-\contentsline {subsubsection}{Transpose String}{46}
-\contentsline {subsection}{Miscellaneous}{48}
-\contentsline {subsubsection}{Subsets of a subset in $O(3^n)$}{48}
-\contentsline {subsubsection}{Warnsdorff\IeC {\textquoteright }s heuristic for knight\IeC {\textquoteright }s tour}{48}
-\contentsline {subsubsection}{Josephus}{48}
-\contentsline {subsubsection}{LIS O(n log n) (Maior Seq. Crescente)}{48}
-\contentsline {subsubsection}{Fraction}{49}
+\contentsline {subsubsection}{Transpose String}{47}
+\contentsline {subsection}{Miscellaneous}{49}
+\contentsline {subsubsection}{Subsets of a subset in $O(3^n)$}{49}
+\contentsline {subsubsection}{Warnsdorff\IeC {\textquoteright }s heuristic for knight\IeC {\textquoteright }s tour}{49}
+\contentsline {subsubsection}{Josephus}{49}
+\contentsline {subsubsection}{LIS O(n log n) (Maior Seq. Crescente)}{49}
+\contentsline {subsubsection}{Fraction}{50}

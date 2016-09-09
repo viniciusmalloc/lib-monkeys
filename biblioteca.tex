@@ -65,7 +65,7 @@
 \end{multicols}
 
 \
-
+\newpage
 \includesfile{c++}{Template}{config}{template.cpp}
 
 % \newpage
@@ -111,7 +111,10 @@ Formula: $E(n,k) = (k+1)E(n-1,k) + (n-k)E(n-1,k-1)$.
 % Let $w(x)$ be weight of $x$'s orbit. Sum of all orbits' weights: $\sum_{o \in X/G}w(o) = \frac{1}{|G|} \sum_{g \in G} \sum_{x \in X_g} w(x)$.
 
 % --Section-- Number Theory
+\newpage
 \subsection{Number Theory}
+\includefile{c++}{Multiplicative Inverse}{math}{inverse.cpp}
+
 \subsubsection{Linear diophantine equation}
 $ax + by = c$. Let $d = gcd(a,b)$. A solution exists iff $d|c$. If $(x_0, y_0)$ is any solution, then all solutions are given by $(x, y) = (x_0 + \frac{b}{d}t, y_0 - \frac{a}{d}t), t \in \mathbb{Z}$. To find some solution $(x_0, y_0)$,
 use extended GCD to solve $ax_0 + by_0 = d = gcd(a, b)$, and multiply its solutions by $\frac{c}{d}$.\\
@@ -224,7 +227,7 @@ Precompute all values that the RHS can take for $z$ = 0,1,...,n-1, and brute for
   % \lstinputlisting[language=c++]{string/zfunc.cpp}
 \end{multicols}
 
-\includefile{c++}{Manacher (Maior substring palindromo)}{string}{manacher.cpp}
+\includefile{c++}{Manacher (Maior substring palíndromo)}{string}{manacher.cpp}
 % \includefile{c++}{Aho-Corasick}{string}{aho.cpp}
 
 \newpage
@@ -239,9 +242,9 @@ Precompute all values that the RHS can take for $z$ = 0,1,...,n-1, and brute for
   \item All occurrences: same as before, but must follow inverse suffix links and don't print clones.
 \end{itemize}
 
-\newpage
-\subsubsection{Burrows-Wheeler inverse transform}
-Let B[1..n] be the input (last column of sorted matrix of string's rotations). Get the first column, A[1...n], by sorting B. For each $k$-th occurrence of a character $c$ at index $i$ in A, let next[i] be the index of corresponding $k-th$ occurrence of $c$ in $B$. The $r$-th row of the matrix is A[r], A[next[r]], A[next[next[r]]], ... 
+% \newpage
+% \subsubsection{Burrows-Wheeler inverse transform}
+% Let B[1..n] be the input (last column of sorted matrix of string's rotations). Get the first column, A[1...n], by sorting B. For each $k$-th occurrence of a character $c$ at index $i$ in A, let next[i] be the index of corresponding $k-th$ occurrence of $c$ in $B$. The $r$-th row of the matrix is A[r], A[next[r]], A[next[next[r]]], ... 
 
 % \subsubsection{Huffman's algorithm}
 % Start with a forest, consisting of isolated vertices. Repeatedly merge two trees with the lowest weights.
@@ -476,7 +479,7 @@ Shoot a ray from given point in an arbitrary direction. For each intersection of
 
 % --Section-- Miscellaneous
 \subsection{Dynamic Programming}
-
+\includefile{c++}{Knapsack problem (Mochila)}{dp}{knapsack.cpp}
 \includefile{c++}{Longest Ascending Subsequence}{dp}{las.cpp}
 \includefile{c++}{Integer Partitioning}{dp}{int_part.cpp}
 \includefile{c++}{Edit Distance (with path recovery)}{dp}{edit_dist.cpp}

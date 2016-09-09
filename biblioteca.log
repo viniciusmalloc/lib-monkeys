@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 SEP 2016 22:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 SEP 2016 23:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -604,9 +604,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 \tf@toc=\write3
 \openout3 = `biblioteca.toc'.
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 69.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+[2]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 69.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 (./config/template.cpp
@@ -614,29 +615,29 @@ LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <8> not available
 (Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 3.
- [2])
+)
 Underfull \hbox (badness 10000) in paragraph at lines 84--87
 
  []
 
-[3] [4] (./meh/gcdext.cpp) [5] (./math/sieve.cpp) (./math/miller_rabin.cpp)
-[6] (./math/pollard.cpp) [7] (./meh/sigma.cpp) (./meh/phi.cpp) [8] [9]
-(./string/hash.cpp) (./string/prefixfunc.cpp) (./string/manacher.cpp) [10]
-(./string/suffix_array.cpp)
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 238.
+[3] [4] (./math/inverse.cpp) [5] (./meh/gcdext.cpp) [6] (./math/sieve.cpp)
+(./math/miller_rabin.cpp) [7] (./math/pollard.cpp) [8] (./meh/sigma.cpp)
+(./meh/phi.cpp) [9] [10] (./string/hash.cpp) (./string/prefixfunc.cpp)
+(./string/manacher.cpp) [11] (./string/suffix_array.cpp)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 241.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 238.
- [11] [12]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 241.
+ [12]
 (./graph/bip_match.cpp) [13] <graph/euler.png, id=61, 887.315pt x 94.3525pt>
 File: graph/euler.png Graphic file (type png)
 
 <use graph/euler.png>
-Package pdftex.def Info: graph/euler.png used on input line 280.
+Package pdftex.def Info: graph/euler.png used on input line 283.
 (pdftex.def)             Requested size: 621.11627pt x 66.04628pt.
  [14 <./graph/euler.png>] (./graph/stable_marriage.cpp
 Overfull \hbox (14.12915pt too wide) in paragraph at lines 28--29
@@ -674,7 +675,7 @@ Overfull \hbox (18.92937pt too wide) in paragraph at lines 48--49
 <geometry/candc.png, id=115, 925.4575pt x 224.84pt>
 File: geometry/candc.png Graphic file (type png)
  <use geometry/candc.png>
-Package pdftex.def Info: geometry/candc.png used on input line 428.
+Package pdftex.def Info: geometry/candc.png used on input line 431.
 (pdftex.def)             Requested size: 647.81584pt x 157.38692pt.
 
 [31] [32 <./geometry/candc.png>] (./geometry/range_tree.cpp [33])
@@ -688,19 +689,25 @@ Overfull \vbox (17.86842pt too high) has occurred while \output is active []
 [34] (./geometry/enclosing_circle.cpp) (./geometry/line_sweep.cpp [35])
 (./geometry/closest_points.cpp) [36] (./geometry/isect_primitives.cpp)
 (./geometry/misc_primitives.cpp) (./geometry/point.cpp [37])
-(./geometry/polygon_primitives.cpp) (./geometry/hull.cpp) [38] (./dp/las.cpp
-[39]) (./dp/int_part.cpp) [40] (./dp/edit_dist.cpp [41])
-(./dp/max_submatrix.cpp [42]) (./dp/string_dist.cpp [43] [44]) [45]
-(./dp/transpose_string.cpp [46]) [47] (./misc/subsets.cpp) (./misc/josephus.cpp
-) (./misc/lis.cpp) [48] (./misc/fraction.cpp) [49] (./biblioteca.aux) ) 
+(./geometry/polygon_primitives.cpp) (./geometry/hull.cpp) [38]
+(./dp/knapsack.cpp
+Overfull \hbox (18.92873pt too wide) in paragraph at lines 12--13
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][] 
+ []
+
+) (./dp/las.cpp [39]) (./dp/int_part.cpp [40]) (./dp/edit_dist.cpp [41])
+(./dp/max_submatrix.cpp [42]) (./dp/string_dist.cpp [43] [44] [45]) [46]
+(./dp/transpose_string.cpp [47]) [48] (./misc/subsets.cpp) (./misc/josephus.cpp
+) (./misc/lis.cpp) [49] (./misc/fraction.cpp) [50] (./biblioteca.aux) ) 
 Here is how much of TeX's memory you used:
- 6559 strings out of 493089
- 84040 string characters out of 6134842
+ 6583 strings out of 493089
+ 84321 string characters out of 6134842
  295589 words of memory out of 5000000
- 9767 multiletter control sequences out of 15000+600000
+ 9785 multiletter control sequences out of 15000+600000
  12350 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,12n,58p,604b,1908s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,12n,58p,604b,1817s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/lo
 cal/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/201
 5/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015
@@ -720,10 +727,10 @@ e1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts
 /type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/u
 rw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/couri
 er/ucrro8a.pfb>
-Output written on biblioteca.pdf (49 pages, 338790 bytes).
+Output written on biblioteca.pdf (50 pages, 340100 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 163 compressed objects within 2 object streams
+ 238 PDF objects out of 1000 (max. 8388607)
+ 165 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
